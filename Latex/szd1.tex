@@ -1,0 +1,345 @@
+%\documentclass[a4paper,11pt]{book}
+\documentclass[12pt,letterpaper,twoside,openright]{book}
+
+\def\magyarOptions{defaults=hu-min}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}% for automatic hyphenation of accented chars
+\usepackage[utf8]{inputenc}% for typing chars
+\usepackage[T1]{fontenc}
+\usepackage{amssymb,amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage[font=it]{caption}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsfonts}
+\usepackage{ulem}
+\usepackage{bm}
+\linespread{1.5}
+\usepackage{anysize}
+\marginsize{3cm}{3cm}{2cm}{2cm}
+
+\makeatletter
+\def\footnoterule{\kern-3\p@
+  \hrule \@width 2in \kern 2.6\p@} % the \hrule is .4pt high
+\makeatother
+
+\frenchspacing
+\sloppy 
+
+\usepackage{fancyhdr}
+\pagestyle{empty}
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\fancyfoot{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+%\numberwithin{equation}{section}
+
+\usepackage{times}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\author{Horváth Bendegúz}
+\title{Photo Z}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\color{white}Horváth Bendegúz}
+\vspace{150 pt}
+\hrule height 1pt
+\vskip 0.3 cm
+\begin{LARGE}
+Gépi tanulási módszerek a fotometrikus vöröseltolódás-becslésben\end{LARGE}
+\vskip 0.3 cm
+\hrule height 1pt
+
+\vskip 0.3 cm
+
+\begin{small}
+Fizika BSc szakdolgozat
+\end{small}
+
+\vskip 2 cm
+
+\begin{Large}
+Horváth Bendegúz
+\end{Large}
+
+\vskip 0.2 cm
+
+\begin{small}
+az ELTE TTK Fizika BSc hallgatója
+\end{small}
+
+\vskip 3 cm
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{lr}
+
+\textbf{Témavezető:}& \begin{large}Dr. Csabai István\end{large} egyetemi tanár, Komplex Rendszerek Fizikája Tanszék
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{\stretch{1}}
+Budapest, 2018 május
+
+\end{center}
+\end{titlepage}
+\newpage
+
+\chapter*{\centering \begin{normalsize}Kivonat\end{normalsize}}
+\begin{quotation}
+\noindent % abstract text
+Ide kell megírnom a kivonatot.
+\end{quotation}
+\clearpage
+
+
+
+\tableofcontents
+%\listoffigures
+
+
+\pagestyle{fancy}
+\lhead[\bfseries \leftmark]{\bfseries \rightmark}
+\lhead[\bfseries \nouppercase{\rightmark}]{\bfseries \nouppercase{\leftmark}}
+\chead{}
+\rhead{\thepage}
+\fancyfoot{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+
+\setcounter{page}{1}
+\setcounter{section}{0}
+
+
+%"Galaxy redshifts provide the Rosetta Stone of observational cosmology. "
+
+
+\chapter{Bevezetés}
+Az Univerum nagy skálás szerkezetének megértéséhez szükséges, hogy térképet tudjunk készíteni a galaxisok elhelyezkedéséről. Két koordinátát, a galaktikusszélességet és galaktikushosszúságot könnyen megkaphatjuk, viszont a  távolság meghatározása már nehezebb feladat. A  trigonometrikus parallaxis módszer a legjobb technikákkal is csak galaxison belül működik, a jó \textit{seeing} érdekében pedig űrtávcső kell.  A standard gyertya módszerek pontos távolságértéket adnak, de csak néhány százmillió fényév távolságon belül alkalmazhatóak, ezért kell egy olyan módszer, amivel távolabb is mérhetünk, pontosan. 
+\newline \indent
+A XX. század elején Edwin Hubble és Vesto Slipher a galaxisok színképének tanulmányozása során észrevették, hogy a színképek eltolódnak a nagyobb hullámhosszak, a vörös színtartomány felé a laboratóriumban mért vonalszerkezethez képest, a galaxis vöröseltolódást szenved. Hubble méréseket készített a galaxisok távolságáról és vöröseltolódásáról, és lineáris összefüggést tapasztalt, amit a később róla elnevezett törvény ír le:
+\begin{equation}
+v = H\cdot d,
+\end{equation}
+az arányossági tényező a Hubble-állandó, értéke $ H = 73.45\pm1.66$ \textit{km/Mpc}. Ez az összefüggés lehetőséget ad  a pontos távolságmérésre, ha  a galaxisok vöröseltolódását meg tudjuk mérni. 
+\newline \indent
+Vöröseltolódás mérésre a legpontosabb módszer felvenni az objektum spektroszkópiai képét, és megnézni, hogy a vonalak mennyire csúsztak el. A megfelelő minőségű spektrum felvételéhez akár egy órányi távcsőidő szükséges, ezért sokáig nem is készült égbolttérkép. Az 1986-ban Margaret Geller és munkatársai által készítet égtérkép csupán egy vékony szeletet fedett le az égből, de már azon is kirajzolódott, hogy a galaxiseloszlás nem egyenletes azon a skálán. Gellerék térképén a legtávolabbi galaxisok körülbelül 200 \textit{Mpc} távolságnyira voltak tőlünk, ezért volt motiváció elkészíteni egy még távolabb látó térképet. A \textit{BEKS} égfelmérés szűkebb, $1\times 1$ négyzetfokos tartományban, ceruzaszerűen\footnote{pencil-beam survey} nézett 1000-1000 \textit{Mpc} távolságba mindkét irányba, és ezen a skálán is kirajzolódótt struktúra az anyageloszlásban, és a sűrűség ingadozás periodikusnak mutatkozott. Nagy távolságokra csökkent az észlelt galaxisszám, ez a halványabb galaxisok nehezebb észlelhetősége miatt volt. A technikai fejlődésnek köszönhetően elkészülhettek olyan kisérleti berendezések, amelyek lehetővé tették valódi háromdimenzióban a galaxisok pontos helyzetének felmérését. A Sloan Digital Sky Survey első fázisában 1 millió objektum spektrumát vette fel négy év alatt\cite{fr}. Ez a sebeség nem kielégítő, ezért felmerült az igény, hogy a vöröseltolódásokat fotometriai úton mérjék. A fotometriával mért vöröseltolódások kicsit pontatlanabbak, de mrérésük gyorsabb mint spekroszkópiával, ezenkívűl halványabb objektumokat is lehet vele mérni, magasabban van a magnitúdó korlát. Ezen tulajdonságok vonzóvá teszi a vöröseltolódás becslését fotometriai módszerekkel.
+\newline \indent
+Dolgozatom célja az általam készített, gépi tanuláson alapuló fotometrikus vöröseltolódás-becslő módszerek bemutatása, amelyek a galaxisok képeit használjaák fel fotometriaia adatként. 
+
+
+\chapter{Vöröseltolódás-becslés és gépi tanulás} %%%%%%%% vagy Elméleti áttekintés
+\section{Fotometrikus vöröseltolódás-becslés}
+A vöröseltolódás fotometriával történő becslésének kétféle megközelítése van, empirikus és spektrumokon alapuló. Egy  spektrumon alapuló módszert előszőr 1962-ban írt le  Baum\cite{baum}, fotoelektromos fotométert használt kilenc sáváteresztő filterrel, amik  3730 \AA  \text{ }és 9875 \AA \text{ }közötti hullámhosszú fényt engedtek át. Ezzel a rendszerrel 6 fényes elliptikus galaxis spektrális energia-eloszlását (spectral energy distribution, SED) mérte meg a Virgo halmazból, majd még háromnak egy másik halmazból. A SED-ek átlagát ábrázolta a hullámhossz logaritmusának függvényében, és képes volt észrevenni az eltolódást a két energia sűrűségeloszlás  között, így a második klaszternek a vöröseltolódását is megkapta. Mérése pontos volt, de a módszer arra támaszkodott, hogy a  spektrumoknak 4000\text{ }\AA -nél levágása van, melyet a csillag-atmoszférák fémtartalma okoz, ez az elliptikus galaxisoknál jól látható, de például az  aktív csillagkeletkezést mutató irreguláris galaxisokban ez a levágás nem figyelhető meg, ezért ez a módszer csak elliptikus galaxisoknál volt használható\cite{webp}.
+\newline \indent
+David C. Koo egy másik módszert, a szín-szín diagrammok módszerét vezette be 1985-ös cikkében\cite{Koo}. Négy sáváteresztő szűrőt használt, melyeken mért magnitúdók különbségével létrehozott színtereken ábrázolva az azonos típusú, különböző vöröseltolódású galaxisokat jól definiált görbét kapott. Szín-szín diagrammokat bármilyen kombinációjából lehet készíteni három vagy több színnek, az optimális választás a várt vöröseltolódás-eloszlástól függhet, a gyakorlati választás a rendelkezésünkre álló szűröktől\cite{Koo}. Ez a megközelítés  a fotometriai vöröseltolódás-meghatározás fontos eleme lett, ugyanis az egyes galaxisok típusának és színszűrőkön mért fényességének ismeretében meghatározható, hogy milyen vöröseltolódást szenved a galaxis.
+\newline \indent
+ Egy harmadik, gyakran használt módszer a \textit{template fitting} (sablon illesztés), ez a módszer is a spektrális energiasűrűség-eloszlásra támaszkodik, az ismert vöröseltolódású és SED-ű galaxisok SED-jéből felépül egy könyvtár, és az ismeretlen vöröseltolódású galaxisok SED-jét hozzá lehet párosítani hasonlóság alapján a könyvtárban lévőkhöz. A \textit{template} módszerek nagyon hasznosak lehetnek új égboltfelmérésnél, ha nem áll rendelkezésre megfelelő mennyiségű spektroszkópiai adat. A módszer használatával, különösen ha elméleti sablonokat használnak\cite{bruzual}, a vöröseltolódáson kívűl egyéb fizikai tulajdonságát is is ki lehet nyerni a galaxisnak. Megfelelő használatához a sablonkönyvtárnak teljesnek kell lennie, hogy össze lehessen kötni mindegyik mérni kívánt galaxis SED-jét egy sablonnal, különben szisztematikus hiba jelenik meg a mérésben, viszont a túl sok sablon degenerációhoz vezethet. A sablonillesztő és spektrumokon alapuló módszerek egyébb változatait és eredményeik összevetését jól leírják Hildebrandt és társai\cite{hild}.
+\newline \indent
+Empirikus módszerek alkalmazásához szükség van nagy mennyiségű spektroszkópiával mért vöröseltolódás-adatra és hozzájuk valamilyen, fotometriával mért adatokra. Az egyik legegyszerűbb módszer, hogy a színszűrőkön mért magnitúdóértékekere többváltozós lineáris vagy kvadratikus függvényt illesztenek\cite{connoly et al}. Ezeket az adatokat felhasználva a függvényillesztés helyett lehet gépi tanuló eljárásokat is alkalmazni, például \textit{nearest neighbour}\cite{app_photoz}, \textit{random forest}\cite{rf} vagy neurális hálókat\cite{mlrsone}.
+Ezeknek a módszereknek előnye, hogy használatuk viszonylag egyszerű, hatalmas adathalmazokon is működhetnek, illetve nincs szükség a SED-re se, de nagy mennyiségű és jó minőségű tanulóhalmaz kell az előkészületekhez.
+
+\section{A gépi tanulási módszerek}
+A gépi tanuló módszerek már a \rom{20.} század közepén megjelentek, de a számítástechnika és a rendelkezésre álló adatok mennyisége még nem állt olyan szinten, hogy töretlenül fejlődhessen. Az akkori megközelítés szorosan összefüggött a mesterséges intelligencia kutatásával, de az 1990-es években az irány eltolódott a gyakorlati jellegű problémák megoldása felé. Ma már egyre több használható adat és fejlett grafikus processzorok mellett sokféle gépi tanuló algoritmus lett implementálva, így a nehézségek a megfelelő módszer megtalálása és alkalmazása az adatokra, illetve az adatok használható formába hozása. A  gépi tanulás célja, hogy a gép \textit{megértse} az adatok szerkezetét, felismerjen egy szabályt és ez alapján  jóslatokat tegyen. 
+\newline \indent
+ Három nagyobb kategóriába sorolhatjuk a módszereket a rendelkezésre álló adatok és problémák alapján. Az egyik csoport a felügyelt tanulás, ilyenkor rendelkezésünkre álló adatok jelöltek, van egy \textit{ground truth}, amit a modell jóslatainak meg kell közelítenie. A felügyelt tanulási módszereket osztályozás és regressziós problémák megoldásához használják, napjainkban az egyre nagyobb felcímkézett adathalmzoknak köszönhetően egyre több problémára tudják alkalmazni. A felügyelet nélküli tanulási módszerek felcímkézetlen adatokkal dolgoznak, feladatuk, hogy felfedjék a az adtokban rejtett struktúrákat. Az \textit{ground truth} hiánya miatt nem lehet jellemezni a tanulás minőségét számértékkel. 
+A fotometrikus vöröseltolódás-becslésben a várt végeredmény jól meghatározott, ezért felügyelt tanulási módszereket alkalmaznak \cite{mlrsone}, \cite{mlrstwo}. Ezeknek a módszerek megértéséhez fontosnak tartom bemutatni a munkám során használt eljárások általános a működési elvét, és alkalmazhatóságának határait. 
+\newline \indent
+Felügyelt tanulásnál rendelkezésünkre áll egy $(x_1, y_1), (x_2, y_2),...(x_N, y_N)$ adathalmaz, ahol $x_i$ egy mintát jelöl és a tulajdonságok(features) számával megegyező dimenziójú vektor, $y_i$ jelöli az osztálycímkét vagy a minta értékét regressziós problámákban, dimenziója az osztályok számával megegyező. A feladat, hogy a gép megtalálja azt a leképzést, ami a lehető legkisebb hibával képez $x_i$-ből $y_i$-be még nem látott minták esetén is. A hiba mérését az adatokhoz és a feladathoz illő metrikával kell végezni. A kutatáshoz kétféle módszert használtam, \textit{random forest regressort} és neurális hálókat. 
+\newline \indent
+A \textit{random forest} algoritmus egyik jó tulajdonsága, hogy alkalmazható klasszifikációs és regressziós problémákra is, alapját a döntési fák sokasága képezi, amiket összefűzve pontosabb becslést tud adni. A döntési fák felépülése a gyökér csomópontnál kezdődik, ami tartalmazza a tulajdonságokat és a célértéket. A csomópontnál meglévő jellemzőket felosztják az így létrejövő utódpontok között, igyekezve a hibát minimalizálni. A folyamatot tovább iterálva létrejön egy rétege a csomópontoknak, amelyek így egy fát alkotnak. A fa kialakulását szabályozni lehet, paraméterek lehetnek, hogy hány hány rétegű, milyen mély legyen a fa, minimum hány elem kerüljön egy levélbe\footnote{levél a döntési fának az a része, amiből nem nő ki több ág}, minimum hány felé legyen osztva a minta egy csomópontnál, vagy milyen módon mérje a szétválasztás minőségét. Véletlenség az erdőbe úgy kerül, ha az egyes fáknál a szétválasztás a csomópontoknál nem a lehető legjobb \textit{split} szerint történik, hanem véletlenszerűen kiválasztott részét kapják meg a  tulajdonságoknak. Erre azért van szükség, mert a fontosabb tulajdonságok dominálnának mindegyik fa döntésében, így az egyes fák predikciói korreláltak lennének \cite{randomF}. Az erdőbe több fát adva az algoritmus nem tanul túl, becslései jobban konvergálnak a kívánt végeredményhez, de határértéke van a hibának \cite{rf2}. Előnye még, hogy felfedi a prediktálás szempontjából fontos tulajdonságokat, 
+sok attribútummal rendelkező adathalmazoknál ez segíthet az összefüggések megértésében. A fő korlátai, hogy a túl sok fa lassú prediktálást eredményez, illetve regressziós problámáknál a modell nem tud extrapolálni, csak a tanulóhalmaz értékkészletein belüli eredményeket ad. Komplexebb vagy zajosabb adatoknál érdemes máshogy próbálkozni, ezen esetekben például mesterséges neurális hálókkal jobb ereményt lehet elérni.
+\newline \indent
+A mesterséges neurális háló egy leegyszerűsített modellje a biológiai neurális hálónak, megtartva annak jó tulajdonságait és a tanulás mechanizmusát. Alap építőkövei a neuronok és a súlyok\footnote{biológiai analógiája az axonok}, a neuronok a súlyokon keresztül vannak összekötve egymással és ezek adják meg, hogy az egyik neurontól a másik milyen súllyal kapja meg az értékét. A neuronok rétegekbe vannak rendezve: bemeneti réteg, köztes réteg és kimeneti réteg\footnote{input layer, hidden layer és output layer}, a köztes réteg több rétegből is állhat. Az egyazon rétegben lévő neuronok nincsenek összekötve egymással, értéküket az alattuk lévő neuronoktól kapják a súlyokkal számolva. Matematikai formában az értékátadás:
+\begin{equation}
+z_i = w_{i1}x_1 + w_{i2}x_{2} + ... + w_{in}x_n + b_i, 
+\end{equation}
+az egyenletben $z_i$ a rétegben az $i$-edik neuron, $w_{ij}$ az $x_j$ előző rétegbeli neuron és $z_i$ neuront összekötő súly értéke, $b_i$ pedig a \textit{bias} vektor $i$-edik eleme.  
+
+%A \textit{bias} hozzáadása növeli a hálózat kapacitását a problémák megoldására, azáltal, hogy...
+Ez átírható egy egész rétegre:
+
+%%  begin eq
+\begin{equation}
+\underline{z} = \bold{W}\underline x +\underline{b}
+\end{equation}
+%%
+A $\bold{W}$ a $w_{ij}$ súlyokból képzett súlymátrixot jelöli. Ahhoz, hogy a háló bonyolultabb problémákat is meg tudjon oldani, szükséges nemlinearitást vinni a rendszerbe. Ehhez  aktivációs függvényt alkalmazunk, ami eldönti, hogy a neuron aktivizált legyen vagy sem.  
+%%% begin fig
+\begin{figure}[]
+\centering
+\hspace{-2.8 cm}
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[height=40mm]{fig1.pdf}
+\end{subfigure}\hspace{3.5 cm}
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[height=35mm]{fig2.pdf}
+\end{subfigure}
+\caption[Neurális háló vázlatos modellje]{Egy nerális háló vázlatos modellje és egy neuron aktivációjának a folyamata.}
+
+\end{figure}
+%%% fig1 end
+Gyakran alkalmazott aktivációs függvény a sigmoid:
+\begin{equation}
+S(z) = \frac{1}{1 + e^{-z}}
+\end{equation}
+Illetve a \textit{rectified linear unit}(ReLU):
+\begin{equation}
+R(z) = \max{(0, z)}
+\end{equation}
+A ReLU előnye, hogy a súlyok optimalizálásánál történő deriválásoknál az eltünő gradiens problémája nem áll fenn, így gyorsabb tanulást eredményez és a sigmoidhoz képest nem olyan szűk intervallumon ad vissza értékeket. A bemenő adatok ilyen transzformációkon mennek keresztül, míg kimenő adatként össze lehet hasonlítani a várt kimenettel. Az összehasonlítás a hibafügvénnyel történik, ami kiszámolja a két érték közötti távolságot valamilyen metrikával. Legtöbbször a hibafüggvényt több különböző adat becslése után értékeltetjük ki, a háló \textit{batch}-okban kapja meg az adatot. Regressziós problémákban kedvelt hibafüggvény a \textit{mean sqared error}:
+\begin{equation}
+MSE = \frac{1}{n}\sum^n_{i =0}(y_i -p(x_i))^2
+\end{equation}
+a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \textit{batch} méret. A hiba minimalizálása egy optimalizációs probléma, a $p$ függvény a súlyoktól függ, amiket úgy kell megváltoztatni, hogy a hiba minimális legyen. A súlyok optimalizálása \textit{backpropagation}-nel történik, a hibafüggvényt deriválva a súlyok szerint a láncszabállyal, az utolsó rétegtől kezdve az elejéig, megkapjk a gradiensmátrixokat rétegenként, amit szorozva egy kis számmal(\textit{learning rate}), levonva a súlymátrixokból megkapjuk az új súlyokat. A súlyok frissítése \textit{batch}-onként történik, így a \textit{batch}mérettel és a \textit{learning rate}-tel is lehet a tanulást gyorsítani, majd pontosabbá tenni \cite{batchs}.
+%%% Architektúrák és CNN !!!
+
+
+\section*{Eddigi eredmények és módszerek}
+%%% irodalmi áttekintés a image---> redshift és eredményeik.
+
+
+ \chapter{Adatok}
+ Az eredményes gépi tanuláshoz a nagy mennyiségű és jó minőségű adat majdnem annyira fontos, mint a jó modell megválasztása. Általában nem áll  rendelkezésünkre egyből az algoritmusnak adható adat, a nyers adatokat előbb preprocesszállni kell, ki kell nyerni a fontos tulajdonságokat, melyek előztetes ismereteink alapján fontosak lehetnek, és össze kell állítani az adathalmazt, amelyet majd  szétválasztunk tanuló- és teszthalmazra. 
+ \newline \indent 
+ A kutatómunkámhoz sok, jó minőségű galaxis képére volt szükségem, és mindegyik galaxisnak a spektroszkópiával mért vöröseltolódására is, ezekhez az adatokhoz a Sloan Digital Sky Survey adatbázisában fértem hozzá.
+ 
+\section{Sloan Digital Sky Survey}
+ A Sloan Digital Sky Survey az eddigi legrészletesebb égboltfelmérés, mély, több színsávos képekkel az ég egyharmadáról, 500 milló asztrofizikai objektumról, 3 millió felvett spektrumadattal. A felmérést 2000-ben kezdte, több ciklusban, 2014-ben kezdődőtt a negyedik fázis (SDSS-IV), és már elkezdődtek a megbeszélések az SDSS-V elindításáról\cite{sdssV}. A megfigyelési adatokat egy külön erre a célra megépített 2.5 m széles optikai teleszkóp szolgáltatja az Apache Point Obszervatóriumból, Új Mexikóban.
+ Öt színsávaban mér, a látható fény és az infravörös tartománya között,  $u$, $g$, $r$, $i$ és $z$ színszűrőkkel (ultraviolet, green, red, near infrared és infrared), amik 3000 \AA\text{ }  és 10000 \AA\text{ }  közötti tartományt fedik le. A különböző szűrőkön keresztül a CCD chipek egymás után rögzítenek, 71.2 másodperc késéssel, $r$, $i$, $u$, $z$ és $g$ sorrendben, így a különböző színű képeken előfordulhat, hogy egy objektum kicsivel arrébb. Ennek volt előnye is, mozgó objektumokat könnyebben lehetett azonosítani, például létre tudtak hozni aszteroida katalógusokat. Az SDSS képek alapvető egysége a \textit{field}, ami 10-szer 13 szögperces szeletet tartalmaz az égből, és 1489-szer 2048 pixelt tartalmaz és az egyes \textit{fieldeket} három jelzőszám teszi egyedivé, a \textit{field number},  a \textit{run}, ami a szkennelés száma, a \textit{camera cloumn}, ami a megmutatja melyik oszlop CCD kamera készítette a képet egy 1 és 6 közötti szám, mindegyik oszlop egy \textit{fieldet} készít, ami 128 pixel szélességben fed át a szomszédossal.  Az elkészült felvételek az SDSS képfeldolgozó pipelinejába kerülnek, ahol kalibrált FITS formátumú képet csinálnak, és a katalógushoz hozzá adják a képi paramétereket.
+ \newline \indent
+ A megfigyeléseket folyamatosan végzik, az adatbázisokat viszont csak évente frissítik, ezeket a \textit{data release}-nek (DR)hívják és tartalmazzák az előző megfigyelésekből származó adatokat is. Az SDSS virtuális oszervatórium keretrendszerben működik, adatai publikusak. Az objekumok és paramétereik relációs adatbázisba vannak rendezve, a SQL nyelvet használva lehet lekérdezéseket indítani.
+ %%%% Casjobs és skyserver
+ \section{A tanulóhalmaz elkészítése}
+ 
+ 
+ \chapter{A kutatás}
+\section{Tanulóhalmaz}
+\section{Módszerek}
+\section{Modellek}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{99\kern\bibindent}
+\def\bibindent{1em}
+
+\makeatletter
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\makeatother
+\addcontentsline{toc}{chapter}{Irodalomjegyzék}
+\bibitem{fr}Z. Frei and A. Patkós, Inflációs Kozmológia: (Typotex, Budapest, 2005).
+
+
+
+%%%2    %%%%%   photo z
+\bibitem{baum} Baum, W. A.: 1962, Problems of Extra-Galactic Research, Proceedings from IAU Symposium no. 15. Edited by George Cunliffe McVittie. International Astronomical Union Symposium no. 15, Macmillan Press, New York, p.390
+
+
+\bibitem{webp}“Photometric Redshifts.” NASA/IPAC Extragalactic Database - NED, ned.ipac.caltech.edu/level5/Glossary/Essay\_{}photredshifts.html.
+
+
+\bibitem{Koo}Koo, D. C. “Optical Multicolors - A Poor Person's Z Machine for Galaxies.” The Astronomical Journal, vol. 90, 1985, p. 418., doi:10.1086/113748.
+
+\bibitem{bruzual}Bruzual, G., and S. Charlot. “Stellar Population Synthesis at the Resolution of 2003.” Monthly Notices of the Royal Astronomical Society, vol. 344, no. 4, 2003, pp. 1000–1028., doi:10.1046/j.1365-8711.2003.06897.x.
+
+
+\bibitem{hild}Hildebrandt, H., et al. “PHAT: PHoto-ZAccuracy Testing.” Astronomy \&{} Astrophysics, vol. 523, 2010, doi:10.1051/0004-6361/201014885.
+
+
+
+\bibitem{connoly et al}Connolly, A. J., et al. “Slicing Through Multicolor Space: Galaxy Redshifts from Broadband Photometry.” The Astronomical Journal, vol. 110, 1995, p. 2655., doi:10.1086/117720.
+
+\bibitem{app_photoz} Csabai, I., et al. “The Application of Photometric Redshifts to the SDSS Early Data Release.” The Astronomical Journal, vol. 125, no. 2, 2003, pp. 580–592., doi:10.1086/345883.
+
+\bibitem{rf}Carliles, S., et al. “Random Forests For Photometric Redshifts.” The Astrophysical Journal, vol. 712, no. 1, 2010, pp. 511–515., doi:10.1088/0004-637x/712/1/511.
+
+%%     2      %% ML
+\bibitem{mlrsone}Collister, AdrianÂ A., and Ofer Lahav. “ANNz: Estimating Photometric Redshifts Using Artificial Neural Networks.” Publications of the Astronomical Society of the Pacific, vol. 116, no. 818, 2004, pp. 345–351., doi:10.1086/383254.
+
+\bibitem{mlrstwo}Csabai, I., et al. “Multidimensional Indexing Tools for the Virtual Observatory.” Astronomische Nachrichten, vol. 328, no. 8, 2007, pp. 852–857., doi:10.1002/asna.200710817.
+
+\bibitem{mlrstwo}Collister, AdrianÂ A., and Ofer Lahav. “ANNz: Estimating Photometric Redshifts Using Artificial Neural Networks.” Publications of the Astronomical Society of the Pacific, vol. 116, no. 818, 2004, pp. 345–351., doi:10.1086/383254.
+
+\bibitem{randomF}Ball, Nicholas M., and Robert J. Brunner. “Data Mining And Machine Learning In Astronomy.” International Journal of Modern Physics D, vol. 19, no. 07, 2010, pp. 1049–1106., doi:10.1142/s0218271810017160.
+
+\bibitem{rf2}“Random Forests Leo Breiman and Adele Cutler.” Statistics at UC Berkeley, www.stat.berkeley.edu/~breiman/RandomForests/.
+
+
+\bibitem{mlrsthree}Sadeh, I., et al. “ANNz2: Photometric Redshift and Probability Distribution Function Estimation Using Machine Learning.” Publications of the Astronomical Society of the Pacific, vol. 128, no. 968, 2016, p. 104502., doi:10.1088/1538-3873/128/968/104502.
+
+\bibitem{batchs}L., Samuel, et al. “Don't Decay the Learning Rate, Increase the Batch Size.” SAO/NASA ADS: ADS Home Page, 1 Nov. 2017, adsabs.harvard.edu/cgi-bin/bib\_{}query?arXiv\%{}3A1711.00489.
+%%%     3 %%%%% SDSS
+\bibitem{sdssV}Zasowski, Gail. Science Blog from the SDSS, blog.sdss.org/2018/02/21/sdss-v-is-underway/.
+
+%%%% 3 %%%% Trainset
+
+
+\end{thebibliography}
+
+
+
+
+
+\chapter*{Nyilatkozat}
+
+\noindent
+\textbf{Név:} Horváth Bendegúz
+\\
+\textbf{ELTE Természettudományi Kar, szak:} Fizika BSc
+\\
+\textbf{Neptun azonosító:} ZNL3LK\\
+\textbf{Szakdolgozat címe:} Fotometrikus vöröseltolódás becslés
+\vspace*{2cm}    
+
+A    \textbf{szakdolgozat}   szerzőjeként    fegyelmi
+felelősségem  tudatában kijelentem,  hogy a  dolgozatom  önálló munkám
+eredménye, saját  szellemi termékem, abban a  hivatkozások és idézések
+standard  szabályait  következetesen   alkalmaztam,  mások  által  írt
+részeket a megfelelő idézés nélkül nem használtam fel.
+
+\vspace*{2cm}
+Budapest 2018. majus ?.
+\\
+\hspace*{8 cm}\rule{5cm}{0.5pt}
+\end{document}
+
