@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 MAY 2018 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAY 2018 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,6 +561,24 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 )
 (./szd1.aux
 
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
 LaTeX Warning: Label `mlrstwo' multiply defined.
 
 )
@@ -704,13 +722,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 1. fejezet.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
+Underfull \hbox (badness 10000) in paragraph at lines 149--155
 []\T1/ptm/m/n/12 Dolgozatom cél-ja az ál-ta-lam ké-szí-tett, gé-pi ta-nu-lá-son
  ala-pu-ló fo-to-met-ri-kus
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 148--154
+Underfull \hbox (badness 1590) in paragraph at lines 149--155
 \T1/ptm/m/n/12 vöröseltolódás-becsl® mód-sze-rek be-mu-ta-tá-sa, ame-lyek a ga-
 la-xi-sok ké-pe-it hasz-nál-ja-ák
  []
@@ -718,7 +736,7 @@ la-xi-sok ké-pe-it hasz-nál-ja-ák
 [3] [4]
 2. fejezet.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 157.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 158.
 
 Underfull \vbox (badness 2027) has occurred while \output is active []
 
@@ -728,81 +746,139 @@ Underfull \vbox (badness 2027) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 176.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 176.
+
 Underfull \vbox (badness 3907) has occurred while \output is active []
 
  [7]
-Underfull \vbox (badness 4403) has occurred while \output is active []
-
- [8]
+[8]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 189.
+d on input line 192.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 194.
+               Default added (so using `tbp') on input line 197.
 
-<fig1.pdf, id=48, 322.22884pt x 164.68527pt>
-File: fig1.pdf Graphic file (type pdf)
- <use fig1.pdf>
-Package pdftex.def Info: fig1.pdf used on input line 198.
+<Figures/fig1.pdf, id=49, 322.22884pt x 164.68527pt>
+File: Figures/fig1.pdf Graphic file (type pdf)
+ <use Figures/fig1.pdf>
+Package pdftex.def Info: Figures/fig1.pdf used on input line 201.
 (pdftex.def)             Requested size: 222.69212pt x 113.81102pt.
 
-Overfull \hbox (89.61723pt too wide) in paragraph at lines 198--199
+Overfull \hbox (89.61723pt too wide) in paragraph at lines 201--202
 [][] 
  []
 
-<fig2.pdf, id=49, 309.76228pt x 136.78102pt>
-File: fig2.pdf Graphic file (type pdf)
- <use fig2.pdf>
-Package pdftex.def Info: fig2.pdf used on input line 201.
+<figures/fig2.pdf, id=50, 309.76228pt x 136.78102pt>
+File: figures/fig2.pdf Graphic file (type pdf)
+ <use figures/fig2.pdf>
+Package pdftex.def Info: figures/fig2.pdf used on input line 204.
 (pdftex.def)             Requested size: 225.53375pt x 99.58464pt.
 
-Overfull \hbox (92.45886pt too wide) in paragraph at lines 201--202
+Overfull \hbox (92.45886pt too wide) in paragraph at lines 204--205
 [][] 
  []
 
-[9 <./fig1.pdf> <./fig2.pdf>] [10]
-3. fejezet.
-[11
-
-] [12]
-4. fejezet.
-[13
-
-] [14
+[9 <./Figures/fig1.pdf> <./figures/fig2.pdf>] [10] [11] [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+3. fejezet.
+[13] [14]
+4. fejezet.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 256.
+
+<Figures/pmu3.png, id=103, 2823.54875pt x 2772.3575pt>
+File: Figures/pmu3.png Graphic file (type png)
+ <use Figures/pmu3.png>
+Package pdftex.def Info: Figures/pmu3.png used on input line 258.
+(pdftex.def)             Requested size: 133.04286pt x 133.04204pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
+[][]
+ []
+
+<Figures/pmg3.png, id=105, 2903.84875pt x 2779.38374pt>
+File: Figures/pmg3.png Graphic file (type png)
+ <use Figures/pmg3.png>
+Package pdftex.def Info: Figures/pmg3.png used on input line 264.
+(pdftex.def)             Requested size: 133.06024pt x 133.03993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+[][]
+ []
+
+<Figures/pmr3.png, id=106, 2886.785pt x 2763.32375pt>
+File: Figures/pmr3.png Graphic file (type png)
+ <use Figures/pmr3.png>
+Package pdftex.def Info: Figures/pmr3.png used on input line 269.
+(pdftex.def)             Requested size: 133.07123pt x 133.07233pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+[][]
+ []
+
+<Figures/pmi3.png, id=107, 2839.60875pt x 2779.38374pt>
+File: Figures/pmi3.png Graphic file (type png)
+ <use Figures/pmi3.png>
+Package pdftex.def Info: Figures/pmi3.png used on input line 275.
+(pdftex.def)             Requested size: 133.063pt x 133.03993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
+[][]
+ []
+
+<Figures/pmz3.png, id=108, 2823.54875pt x 2763.32375pt>
+File: Figures/pmz3.png Graphic file (type png)
+ <use Figures/pmz3.png>
+Package pdftex.def Info: Figures/pmz3.png used on input line 280.
+(pdftex.def)             Requested size: 133.04286pt x 133.07233pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
+[][]
+ []
+
+[15
+
+] [16 <./Figures/pmu3.png> <./Figures/pmg3.png> <./Figures/pmr3.png> <./Figures
+/pmi3.png> <./Figures/pmz3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 []\T1/ptm/m/n/12 ^^PPhotometric Reds-hifts.^^Q NA-SA/IPAC Ext-ra-ga-lac-tic Da-
 ta-ba-se - NED,
  []
 
-[15]
-Underfull \hbox (badness 4120) in paragraph at lines 297--298
+[17
+
+]
+Underfull \hbox (badness 4120) in paragraph at lines 346--347
 []\T1/ptm/m/n/12 Csabai, I., et al. ^^PMul-ti-di-men-si-o-nal In-dex-ing To-ols
  for the Vir-tu-al Ob-ser-
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 297--298
+Underfull \hbox (badness 2689) in paragraph at lines 346--347
 \T1/ptm/m/n/12 va-to-ry.^^Q Ast-ro-no-mis-che Nach-rich-ten, vol. 328, no. 8, 2
 007, pp. 852^^U857.,
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 303--304
+Underfull \hbox (badness 1546) in paragraph at lines 352--353
 []\T1/ptm/m/n/12 ^^PRandom Fo-rests Leo Bre-iman and Ade-le Cut-ler.^^Q Sta-tis
 -tics at UC Berke-ley,
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 308--310
+Underfull \hbox (badness 2142) in paragraph at lines 357--359
 []\T1/ptm/m/n/12 L., Sa-mu-el, et al. ^^PDon't De-cay the Lear-ning Ra-te, Inc-
 re-a-se the Batch Si-
  []
 
-[16] [17
+[18] [19
 
 ] (./szd1.aux)
 
@@ -810,13 +886,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6107 strings out of 492995
- 88599 string characters out of 6132704
- 175365 words of memory out of 5000000
- 9518 multiletter control sequences out of 15000+600000
- 51057 words of font info for 85 fonts, out of 8000000 for 9000
+ 6147 strings out of 492995
+ 89264 string characters out of 6132704
+ 169488 words of memory out of 5000000
+ 9547 multiletter control sequences out of 15000+600000
+ 56628 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,43p,1893b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,43p,1893b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
@@ -831,12 +907,13 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on szd1.pdf (21 pages, 187012 bytes).
+pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on szd1.pdf (23 pages, 2447160 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 174 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

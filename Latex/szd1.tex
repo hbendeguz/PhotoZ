@@ -106,6 +106,7 @@ Budapest, 2018 május
 \newpage
 
 \chapter*{\centering \begin{normalsize}Kivonat\end{normalsize}}
+\thispagestyle{empty}
 \begin{quotation}
 \noindent % abstract text
 Ide kell megírnom a kivonatot.
@@ -171,10 +172,12 @@ A gépi tanuló módszerek már a \rom{20.} század közepén megjelentek, de a 
 A fotometrikus vöröseltolódás-becslésben a várt végeredmény jól meghatározott, ezért felügyelt tanulási módszereket alkalmaznak \cite{mlrsone}, \cite{mlrstwo}. Ezeknek a módszerek megértéséhez fontosnak tartom bemutatni a munkám során használt eljárások általános a működési elvét, és alkalmazhatóságának határait. 
 \newline \indent
 Felügyelt tanulásnál rendelkezésünkre áll egy $(x_1, y_1), (x_2, y_2),...(x_N, y_N)$ adathalmaz, ahol $x_i$ egy mintát jelöl és a tulajdonságok(features) számával megegyező dimenziójú vektor, $y_i$ jelöli az osztálycímkét vagy a minta értékét regressziós problámákban, dimenziója az osztályok számával megegyező. A feladat, hogy a gép megtalálja azt a leképzést, ami a lehető legkisebb hibával képez $x_i$-ből $y_i$-be még nem látott minták esetén is. A hiba mérését az adatokhoz és a feladathoz illő metrikával kell végezni. A kutatáshoz kétféle módszert használtam, \textit{random forest regressort} és neurális hálókat. 
-\newline \indent
+%\newline \indent
+\subsection{\textit{Random Forest}}
 A \textit{random forest} algoritmus egyik jó tulajdonsága, hogy alkalmazható klasszifikációs és regressziós problémákra is, alapját a döntési fák sokasága képezi, amiket összefűzve pontosabb becslést tud adni. A döntési fák felépülése a gyökér csomópontnál kezdődik, ami tartalmazza a tulajdonságokat és a célértéket. A csomópontnál meglévő jellemzőket felosztják az így létrejövő utódpontok között, igyekezve a hibát minimalizálni. A folyamatot tovább iterálva létrejön egy rétege a csomópontoknak, amelyek így egy fát alkotnak. A fa kialakulását szabályozni lehet, paraméterek lehetnek, hogy hány hány rétegű, milyen mély legyen a fa, minimum hány elem kerüljön egy levélbe\footnote{levél a döntési fának az a része, amiből nem nő ki több ág}, minimum hány felé legyen osztva a minta egy csomópontnál, vagy milyen módon mérje a szétválasztás minőségét. Véletlenség az erdőbe úgy kerül, ha az egyes fáknál a szétválasztás a csomópontoknál nem a lehető legjobb \textit{split} szerint történik, hanem véletlenszerűen kiválasztott részét kapják meg a  tulajdonságoknak. Erre azért van szükség, mert a fontosabb tulajdonságok dominálnának mindegyik fa döntésében, így az egyes fák predikciói korreláltak lennének \cite{randomF}. Az erdőbe több fát adva az algoritmus nem tanul túl, becslései jobban konvergálnak a kívánt végeredményhez, de határértéke van a hibának \cite{rf2}. Előnye még, hogy felfedi a prediktálás szempontjából fontos tulajdonságokat, 
 sok attribútummal rendelkező adathalmazoknál ez segíthet az összefüggések megértésében. A fő korlátai, hogy a túl sok fa lassú prediktálást eredményez, illetve regressziós problámáknál a modell nem tud extrapolálni, csak a tanulóhalmaz értékkészletein belüli eredményeket ad. Komplexebb vagy zajosabb adatoknál érdemes máshogy próbálkozni, ezen esetekben például mesterséges neurális hálókkal jobb ereményt lehet elérni.
-\newline \indent
+%\newline \indent
+\subsection{Mesterséges neurális hálók}
 A mesterséges neurális háló egy leegyszerűsített modellje a biológiai neurális hálónak, megtartva annak jó tulajdonságait és a tanulás mechanizmusát. Alap építőkövei a neuronok és a súlyok\footnote{biológiai analógiája az axonok}, a neuronok a súlyokon keresztül vannak összekötve egymással és ezek adják meg, hogy az egyik neurontól a másik milyen súllyal kapja meg az értékét. A neuronok rétegekbe vannak rendezve: bemeneti réteg, köztes réteg és kimeneti réteg\footnote{input layer, hidden layer és output layer}, a köztes réteg több rétegből is állhat. Az egyazon rétegben lévő neuronok nincsenek összekötve egymással, értéküket az alattuk lévő neuronoktól kapják a súlyokkal számolva. Matematikai formában az értékátadás:
 \begin{equation}
 z_i = w_{i1}x_1 + w_{i2}x_{2} + ... + w_{in}x_n + b_i, 
@@ -195,10 +198,10 @@ A $\bold{W}$ a $w_{ij}$ súlyokból képzett súlymátrixot jelöli. Ahhoz, hogy
 \centering
 \hspace{-2.8 cm}
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[height=40mm]{fig1.pdf}
+\includegraphics[height=40mm]{Figures/fig1.pdf}
 \end{subfigure}\hspace{3.5 cm}
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[height=35mm]{fig2.pdf}
+\includegraphics[height=35mm]{figures/fig2.pdf}
 \end{subfigure}
 \caption[Neurális háló vázlatos modellje]{Egy nerális háló vázlatos modellje és egy neuron aktivációjának a folyamata.}
 
@@ -216,12 +219,18 @@ A ReLU előnye, hogy a súlyok optimalizálásánál történő deriválásokná
 \begin{equation}
 MSE = \frac{1}{n}\sum^n_{i =0}(y_i -p(x_i))^2
 \end{equation}
-a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \textit{batch} méret. A hiba minimalizálása egy optimalizációs probléma, a $p$ függvény a súlyoktól függ, amiket úgy kell megváltoztatni, hogy a hiba minimális legyen. A súlyok optimalizálása \textit{backpropagation}-nel történik, a hibafüggvényt deriválva a súlyok szerint a láncszabállyal, az utolsó rétegtől kezdve az elejéig, megkapjk a gradiensmátrixokat rétegenként, amit szorozva egy kis számmal(\textit{learning rate}), levonva a súlymátrixokból megkapjuk az új súlyokat. A súlyok frissítése \textit{batch}-onként történik, így a \textit{batch}mérettel és a \textit{learning rate}-tel is lehet a tanulást gyorsítani, majd pontosabbá tenni \cite{batchs}.
+a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \textit{batch} méret. A hiba minimalizálása egy optimalizációs probléma, a $p$ függvény a súlyoktól függ, amiket úgy kell megváltoztatni, hogy a hiba minimális legyen. A súlyok optimalizálása \textit{backpropagation}-nel történik, a hibafüggvényt deriválva a súlyok szerint a láncszabállyal, az utolsó rétegtől kezdve az elejéig, megkapjuk a gradiensmátrixokat rétegenként, amit szorozva egy kis számmal(\textit{learning rate}), levonva a súlymátrixokból megkapjuk az új súlyokat. A súlyok frissítése \textit{batch}-onként történik, így a \textit{batch}mérettel és a \textit{learning rate}-tel is lehet a tanulást gyorsítani, majd pontosabbá tenni \cite{batchs}.
 %%% Architektúrák és CNN !!!
-
-
+\newline\indent
+A hálók architektúrájának kialakítására nincs általános szabály, intuíciónkra és hasonló problémámkon jól szereplő hálók mintájára kell hagyatkozni, tanulásából követkztetéseket levonni és alakítgatni. Általánosságban a komplexebb problémákhoz \textit{mélyebb}, több neuronból álló hálók kellenek, de ekkor a beállítandó paraméterek száma is nagyobb lesz, a tanítás lassabb lesz a megnövekedett számítási igény miatt. Képi adatoknál a paraméterek száma nagyon magas lenne, valamint a képnek nem az egész része érdekes, csupán részletek, és ezek a részletek bárhol lehetnek a képen, ezért nem célszerű teljesen összekötött neurális hálókat használni. Ezeknek a problémáknak a megoldására találták ki a konvolúciós neurális hálókat.
+\newline\indent
+A konvolúciós hálókban a rétegek között nincs teljes összeköttetés, a neuron csak az alatta lévő neuronnal, és annak szomszédaihoz kötődik. Az objektumfelismerő-osztályozó problémáknál az objektum bárhol előfordulhat a képen, ezért a neuronokat összekötő súlyoknak is eltolás invariánsank kell lennie, ezért egy rétegben minden neuron ugyanazokkal súlyokkal összegzi az allata lévő neuron szomszédainak kimenetét. A figyelembe vett szomszédok száma meghatároz egy \textit{filter} méretet, a \textit{filter} technikailag egy tenzor, aminek elemei a súlyok. A bemeneti képet végig páztázza a filter, és végrehajta az összegzéseket, az egyes kimenetek egy \textit{aktivációs térképet alkotnak}, amire alkalmazhatjuk a következő réteg konvolúciós réteget. Ez a műveleletet kétdimenziós diszkrét konvolúció a matematikában. A kimeneti \textit{aktivációs térkép} dimenziói egy $n$ széles és $c$ csatornával rendelkező képen alkalmazott $f\times f$ méretű, $s$ ugrással mintavételező \textit{filter}-rel, a képre $p$ \textit{padding}\footnote{kép szélén nullákkal létrehozott keret}-et alkalmazva a konvolúció során a következő képpen alakulnak:
+\begin{equation}
+a = \frac{n+2p-f}{s} +1,
+\end{equation}
+a képleteben $a$ létrejövő \textit{aktivációs térkép} szélessége, $k$ \textit{filter}t alkalmazva $a\times a\times k$ dimenziós 
 \section*{Eddigi eredmények és módszerek}
-%%% irodalmi áttekintés a image---> redshift és eredményeik.
+%%% irodalmi áttekintés az image---> redshift és eredményeik.
 
 
  \chapter{Adatok}
@@ -233,15 +242,53 @@ a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \te
  A Sloan Digital Sky Survey az eddigi legrészletesebb égboltfelmérés, mély, több színsávos képekkel az ég egyharmadáról, 500 milló asztrofizikai objektumról, 3 millió felvett spektrumadattal. A felmérést 2000-ben kezdte, több ciklusban, 2014-ben kezdődőtt a negyedik fázis (SDSS-IV), és már elkezdődtek a megbeszélések az SDSS-V elindításáról\cite{sdssV}. A megfigyelési adatokat egy külön erre a célra megépített 2.5 m széles optikai teleszkóp szolgáltatja az Apache Point Obszervatóriumból, Új Mexikóban.
  Öt színsávaban mér, a látható fény és az infravörös tartománya között,  $u$, $g$, $r$, $i$ és $z$ színszűrőkkel (ultraviolet, green, red, near infrared és infrared), amik 3000 \AA\text{ }  és 10000 \AA\text{ }  közötti tartományt fedik le. A különböző szűrőkön keresztül a CCD chipek egymás után rögzítenek, 71.2 másodperc késéssel, $r$, $i$, $u$, $z$ és $g$ sorrendben, így a különböző színű képeken előfordulhat, hogy egy objektum kicsivel arrébb. Ennek volt előnye is, mozgó objektumokat könnyebben lehetett azonosítani, például létre tudtak hozni aszteroida katalógusokat. Az SDSS képek alapvető egysége a \textit{field}, ami 10-szer 13 szögperces szeletet tartalmaz az égből, és 1489-szer 2048 pixelt tartalmaz és az egyes \textit{fieldeket} három jelzőszám teszi egyedivé, a \textit{field number},  a \textit{run}, ami a szkennelés száma, a \textit{camera cloumn}, ami a megmutatja melyik oszlop CCD kamera készítette a képet egy 1 és 6 közötti szám, mindegyik oszlop egy \textit{fieldet} készít, ami 128 pixel szélességben fed át a szomszédossal.  Az elkészült felvételek az SDSS képfeldolgozó pipelinejába kerülnek, ahol kalibrált FITS formátumú képet csinálnak, és a katalógushoz hozzá adják a képi paramétereket.
  \newline \indent
- A megfigyeléseket folyamatosan végzik, az adatbázisokat viszont csak évente frissítik, ezeket a \textit{data release}-nek (DR)hívják és tartalmazzák az előző megfigyelésekből származó adatokat is. Az SDSS virtuális oszervatórium keretrendszerben működik, adatai publikusak. Az objekumok és paramétereik relációs adatbázisba vannak rendezve, a SQL nyelvet használva lehet lekérdezéseket indítani.
+ A megfigyeléseket folyamatosan végzik, az adatbázisokat viszont csak évente frissítik, ezeket a \textit{data release}-nek (DR) hívják és tartalmazzák az előző megfigyelésekből származó adatokat is. Az SDSS virtuális oszervatórium keretrendszerben működik, adatai publikusak. Az objekumok és paramétereik relációs adatbázisba vannak rendezve, a SQL nyelvet használva lehet lekérdezéseket indítani.
  %%%% Casjobs és skyserver
  \section{A tanulóhalmaz elkészítése}
  
  
  \chapter{A kutatás}
-\section{Tanulóhalmaz}
-\section{Módszerek}
-\section{Modellek}
+\section{Neurális háló és Random Forest kombinálva}
+A \textit{random forest} algoritmus jól teljesít a magnitúdókból prediktálás során, így célszerű megvizsgálni, hogy mennyire működik jól, ha a magnitúdóértékek is becslésből származnak. A képekből való fényességbecsléshez mind az öt színszűrőhöz elkészítettem egy-egy konvoluciós neurális hálót, ezeket a hálókat az első $50.000$ képen tanítottam be. A következő $50.000$ képpel prediktáltam magnitúdóértékeket, ezeket a becsült magnitúdókat használtam, a \textit{random forest regressor} tanításához. A harmadik $50.000$ képnek is megbecsültem a magnitúdóit, és ezekből predikált a véletlen erdő vöröseltolódás-értékeket, így nem volt átfedés a tanuló-és teszthalmazok között. A neurális hálók tanításánál 80 \textit{epoch}-ot használtam mindegyik hálóra, de nem egyben ment végig a tanulás, a \textit{learning rate}-t csökkentettem, ha a hibafüggvény értéke nem csökkent, illetve a \textit{batch} méretet is növeltem közben. Az egymás melletti\footnote{hulámhossz szerint} magnitúdók korrellálása, illetve a célváltozók és a bemeneti adatok hasonlóság miatt az volt a feltételezésem, hogy ugyanolyan architektúrájú neurális hálókat lehet használni mindegyik fényességérték számításához.
+\newline\indent
+Az egyes hálók bemenetként megkapták az $50\times 50\times 1$ méretű, az adott színszűrőn keresztül készített képet inputként. Az első réteg egy konvolúciós réteg volt, $32$ darab $2\times 2$-es filterből állt, alkalmaztam rá a \textit{ReLu} aktivációt és utána egyből egy $2\times 2$ \textit{MaxPooling}-ot.
+%%%%%%%%% FIGURES %%%%%%%%%%
+\begin{figure}[]
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/pmu3.png}
+    %\caption{Picture 1}
+    \label{fig:1}
+  \end{subfigure}
+  \hspace{0cm}
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/pmg3.png}
+    \label{fig:2}
+  \end{subfigure}
+  \hspace{0cm}
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/pmr3.png}
+    \label{fig:2}
+    \hspace{0cm}
+  \end{subfigure}
+  \centering
+   \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/pmi3.png}
+    \label{fig:2}
+    \hspace{0cm}
+  \end{subfigure}
+   \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/pmz3.png}
+    \label{fig:2}
+    
+  \end{subfigure}
+\label{mags}
+\caption{Az egyes neurális hálók magniúdópredikciója ábrázolva a valódi magnitúdóértékek függényében.}
+\end{figure}
+%%%%%%%%% FIGURES_END %%%%%%%%%%
+ Utána a következő konvolúciós réteg $16$ db $2\times 2$-es filterből állt,  \textit{sigmoid} aktivációval, majd egy $2\times 2$-es \textit{MaxPooling} következett. A kijövő értékek kilapítása után következtek a teljesen összekötött rétegek, az első réteg $1024$ neuronból állt, \textit{sigmoid} aktivációval. Utána  $15\%$-os \textit{Dropout} regularizáció következett, ami a túlillesztés elkerülésére szolgált. Ezt követően $512$ neuron, \textit{Relu} aktiváció és $10\%$-os \textit{Dropout}, $256$ neuron \textit{ReLu}-val és végül az egy darab neuron. A hibafüggvény \textit{mean squared error} volt. A \textit{random forest regressor} $250$ fából állt, maximális mélysége $15$, egy levélbe minimum $120$-elemnek kellett kerülnie, egy szétválasztáshoz legalább $28$ minta volt szükséges és a szétválasztás jóságát \textit{mean squared error}-ral mérte. 
+ 
+ 
+
 
 \newpage
 
