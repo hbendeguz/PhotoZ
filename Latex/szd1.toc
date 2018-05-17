@@ -6,7 +6,8 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{8}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Adatok}{13}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{13}
-\select@language {magyar} \contentsline {section}{\numberline {3.2}A tanul\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{14}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A kutat\IeC {\'a}s}{15}
-\select@language {magyar} \contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o} \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{15}
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{17}
+\select@language {magyar} \contentsline {section}{\numberline {3.2}A tanul\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{14}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{14}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A kutat\IeC {\'a}s}{17}
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o} \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{17}
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{19}

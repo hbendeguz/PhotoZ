@@ -244,7 +244,49 @@ a képleteben $a$ létrejövő \textit{aktivációs térkép} szélessége, $k$ 
  \newline \indent
  A megfigyeléseket folyamatosan végzik, az adatbázisokat viszont csak évente frissítik, ezeket a \textit{data release}-nek (DR) hívják és tartalmazzák az előző megfigyelésekből származó adatokat is. Az SDSS virtuális oszervatórium keretrendszerben működik, adatai publikusak. Az objekumok és paramétereik relációs adatbázisba vannak rendezve, a SQL nyelvet használva lehet lekérdezéseket indítani.
  %%%% Casjobs és skyserver
- \section{A tanulóhalmaz elkészítése}
+ \section{A tanulítóhalmaz elkészítése}
+ 
+ 
+ \section{Adatexploráció}
+ Mielőtt elkezdenénk a tanítást, érdemes megvizsgálni a tanulóhalmazunk statisztikai jellemzőit, megnézni mennyire jól reprezentálja a valóságot, valamint feltárni az  összefüggéseket. Ehhez az SDSS \textit{DR7}-es adatbázisának vöröseltolódás-eloszlásával hasonlítottam össze a tanulóhalmaz eloszlását, alkalmaztam egy \textit{Random Forest regreesort} az \textit{ugriz} magnitúdóértékekre, és készítettem egy \textit{korrelációs térképet} a magnitúdókkal és vöröseltolódásokkal. 
+ \newline\indent
+ Az SDSS \textit{DR7}-ben a galaxisok vöröseltolódásának mediánja $z\sim0.07$ \cite{rsd}, a teszthalmazomé $z\sim0.11$, ami a 0.05-ös vöröseltolódásbeli vágásomnak tudható be. Összehasonlítva a \ref{fig:dist}. ábrán a baloldalon az 1-es adathalmaz hisztogramját a jobboldalival, a két eloszlás jó hasonlóságot mutat, a vágásban van különbség, a legtöbb galaxisnak mind a kettő esetben 0.3-nál kisebb a vöröseltolódása.
+ 
+ \begin{figure}[]
+ \centering
+  \begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/hists.pdf}
+    %\caption{Picture 1}
+    \label{fig:1}
+  \end{subfigure}
+  \hspace{2cm}
+  \begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth, height = 1.05\textwidth]{Figures/rsd.png}
+    \label{fig:2}
+  \end{subfigure}
+  \caption{Az általam előállított tanulóhalmaz és az SDSS \textit{DR7} vöröseltolódás-eloszlása. A jobboldali kép forrása: \cite{rsd}}
+  \label{fig:dist}
+ \end{figure}
+ 
+ \begin{figure}[h!]
+ \centering
+  \begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/corrmap.pdf}
+    %\caption{Picture 1}
+    \label{fig:1}
+  \end{subfigure}
+  \hspace{2cm}
+  \begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth, height = 0.95\textwidth]{Figures/relf.pdf}
+    \label{fig:2}
+  \end{subfigure}
+  \caption{A \textit{korrelációs térkép}, a \textit{Random forest} tanulásában a különböző tulajdonságok relatív fontossága. }
+  \label{fig:dist}
+ \end{figure}
+
+ 
+ 
+ 
  
  
  \chapter{A kutatás}
@@ -359,7 +401,7 @@ Az egyes hálók bemenetként megkapták az $50\times 50\times 1$ méretű, az a
 \bibitem{sdssV}Zasowski, Gail. Science Blog from the SDSS, blog.sdss.org/2018/02/21/sdss-v-is-underway/.
 
 %%%% 3 %%%% Trainset
-
+\bibitem{rsd}Verevkin, A. O., et al. “The Non-Uniform Distribution of Galaxies from Data of the SDSS DR7 Survey.” Astronomy Reports, vol. 55, no. 4, 2011, pp. 324–340., doi:10.1134/s1063772911020089.
 
 \end{thebibliography}
 
