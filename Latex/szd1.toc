@@ -1,13 +1,15 @@
-\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{3}
-\select@language {magyar} \contentsline {chapter}{\numberline {2}V\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s \IeC {\'e}s g\IeC {\'e}pi tanul\IeC {\'a}s}{5}
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Fotometrikus v\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s}{5}
-\select@language {magyar} \contentsline {section}{\numberline {2.2}A g\IeC {\'e}pi tanul\IeC {\'a}si m\IeC {\'o}dszerek}{7}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}\textit {Random Forest}}{8}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{8}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Adatok}{13}
-\select@language {magyar} \contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{13}
-\select@language {magyar} \contentsline {section}{\numberline {3.2}A tanul\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{14}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{14}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A kutat\IeC {\'a}s}{17}
-\select@language {magyar} \contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o} \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{17}
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{19}
+\contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{3}
+\contentsline {chapter}{\numberline {2}V\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s \IeC {\'e}s g\IeC {\'e}pi tanul\IeC {\'a}s}{5}
+\contentsline {section}{\numberline {2.1}Fotometrikus v\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s}{5}
+\contentsline {section}{\numberline {2.2}A g\IeC {\'e}pi tanul\IeC {\'a}si m\IeC {\'o}dszerek}{7}
+\contentsline {subsection}{\numberline {2.2.1}\textit {Random Forest}}{8}
+\contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{8}
+\contentsline {chapter}{\numberline {3}Adatok}{13}
+\contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{13}
+\contentsline {section}{\numberline {3.2}A tan\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{14}
+\contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{16}
+\contentsline {chapter}{\numberline {4}M\IeC {\'o}dszerek \IeC {\'e}s eredm\IeC {\'e}nyek}{19}
+\contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{19}
+\contentsline {section}{\numberline {4.2}K\IeC {\"o}vetkez\IeC {\H o}}{21}
+\contentsline {chapter}{\numberline {5}\IeC {\"O}sszegz\IeC {\'e}s}{23}
+\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{25}

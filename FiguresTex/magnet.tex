@@ -1,0 +1,76 @@
+%\documentclass{article}
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage[magyar]{babel}
+\begin{document}
+\pagestyle{empty}
+
+\def\layersep{2.5cm}
+
+\begin{tikzpicture}[shorten >=0pt,->,draw=black!50, node distance=\layersep]
+    \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+    \tikzstyle{neuron}=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+    \tikzstyle{box}=[rectangle,fill=black!25,minimum size=17pt,inner sep=0pt]
+    \tikzstyle{input neuron}=[neuron, draw=black!50 , fill=white!50];
+    \tikzstyle{im neuron}=[box, draw=black!50 , fill=white!50];
+    \tikzstyle{output neuron}=[neuron, draw=black!50 , fill=white!50];
+    \tikzstyle{hidden neuron}=[neuron, draw=black!50, fill=white!50];%blue!50];
+    \tikzstyle{annot} = [text width=4em, text centered]
+
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+     \foreach \name / \y in {1,...,1} 
+        \node[im neuron, pin=left:5 csatorn\'as k\'ep] (I-\name) at (-1,-\y) {};
+
+    % Draw the input layer nodes
+    \foreach \name / \y in {1,...,1} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[im neuron, pin=left:] (I-\name) at (0,-\y) {};
+            
+          
+    \foreach \name / \y in {2,...,6} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:] (I-\name) at (0,-\y) {};
+       \foreach \name / \y in {2,...,2} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Magnitud\'o u] (I-\name) at (0,-\y) {};
+        \foreach \name / \y in {3,...,3} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Magnitud\'o g] (I-\name) at (0,-\y) {};
+\foreach \name / \y in {4,...,4} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Magnitud\'o r] (I-\name) at (0,-\y) {};
+      \foreach \name / \y in {5,...,5} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Magnitud\'o i] (I-\name) at (0,-\y) {};
+         \foreach \name / \y in {6,...,6} 
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Magnitud\'o z] (I-\name) at (0,-\y) {};
+
+        
+
+	 
+    % Draw the hidden layer nodes
+    \foreach \name / \y in {1,...,1}
+        \path[yshift=-2cm]
+            node[hidden neuron] (H-\name) at (\layersep,-\y cm) {};
+	
+    % Draw the output layer node
+    \node[output neuron,pin={[pin edge={->}]right:V\" or\"oseltol\' od\' as \'ert\'ek}, right of=H-1] (O) {};
+
+    % Connect every node in the input layer with every node in the
+    % hidden layer.
+    \foreach \source in {1,...,6}
+        \foreach \dest in {1,...,1}
+            \path (I-\source) edge (H-\dest);
+
+    % Connect every node in the hidden layer with the output layer
+    \foreach \source in {1,...,1}
+        \path (H-\source) edge (O);
+
+    % Annotate the layers
+    \node[annot,above of=H-1, node distance=1cm] (hl) {Teljesen \"oszek\"ot\"ott r\'eteg};
+    \node[annot,left of=hl] {};
+    \node[annot,right of=hl] {};
+\end{tikzpicture}
+% End of code
+\end{document}
