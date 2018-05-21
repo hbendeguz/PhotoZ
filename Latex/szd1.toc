@@ -4,12 +4,14 @@
 \contentsline {section}{\numberline {2.2}A g\IeC {\'e}pi tanul\IeC {\'a}si m\IeC {\'o}dszerek}{7}
 \contentsline {subsection}{\numberline {2.2.1}\textit {Random Forest}}{8}
 \contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{8}
+\contentsline {section}{\numberline {2.3}Eddigi eredm\IeC {\'e}nyek \IeC {\'e}s m\IeC {\'o}dszerek \IeC {\'a}ttekint\IeC {\'e}se}{11}
 \contentsline {chapter}{\numberline {3}Adatok}{13}
 \contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{13}
 \contentsline {section}{\numberline {3.2}A tan\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{14}
 \contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{16}
 \contentsline {chapter}{\numberline {4}M\IeC {\'o}dszerek \IeC {\'e}s eredm\IeC {\'e}nyek}{19}
 \contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{19}
-\contentsline {section}{\numberline {4.2}K\IeC {\"o}vetkez\IeC {\H o}}{21}
-\contentsline {chapter}{\numberline {5}\IeC {\"O}sszegz\IeC {\'e}s}{23}
-\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{25}
+\contentsline {section}{\numberline {4.2}Egy m\IeC {\'e}ly konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o}}{21}
+\contentsline {section}{\numberline {4.3}M\IeC {\'e}ly konvol\IeC {\'o}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o} kieg\IeC {\'e}sz\IeC {\'\i }tve magnit\IeC {\'u}d\IeC {\'o}adatokkal}{24}
+\contentsline {chapter}{\numberline {5}\IeC {\"O}sszegz\IeC {\'e}s}{25}
+\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{27}

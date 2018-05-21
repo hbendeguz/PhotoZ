@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 MAY 2018 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 MAY 2018 00:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,6 +908,30 @@ LaTeX Warning: Label `fig:2' multiply defined.
 LaTeX Warning: Label `sub@fig:2' multiply defined.
 
 
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
 LaTeX Warning: Label `mlrstwo' multiply defined.
 
 )
@@ -1205,13 +1229,13 @@ Underfull \vbox (badness 4001) has occurred while \output is active []
 <Figures/hists.pdf, id=107, 406.68814pt x 266.68005pt>
 File: Figures/hists.pdf Graphic file (type pdf)
  <use Figures/hists.pdf>
-Package pdftex.def Info: Figures/hists.pdf used on input line 266.
+Package pdftex.def Info: Figures/hists.pdf used on input line 265.
 (pdftex.def)             Requested size: 155.25673pt x 155.25642pt.
 
 <Figures/rsd.png, id=108, 625.33624pt x 423.5825pt>
 File: Figures/rsd.png Graphic file (type png)
  <use Figures/rsd.png>
-Package pdftex.def Info: Figures/rsd.png used on input line 272.
+Package pdftex.def Info: Figures/rsd.png used on input line 271.
 (pdftex.def)             Requested size: 155.25545pt x 163.01836pt.
 
 
@@ -1342,56 +1366,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--359
 Underfull \vbox (badness 2237) has occurred while \output is active []
 
  [20 <./Figures/pmu3.png> <./Figures/pmg3.png> <./Figures/pmr3.png> <./Figures/
-pmi3.png> <./Figures/pmz3.png>] [21 <./Figures/pRF.png> <./Figures/histrf.pdf>]
- [22
+pmi3.png> <./Figures/pmz3.png>] <Figures/plotCNN2.png, id=239, 3656.66125pt x 3
+832.3175pt>
+File: Figures/plotCNN2.png Graphic file (type png)
 
-]
+<use Figures/plotCNN2.png>
+Package pdftex.def Info: Figures/plotCNN2.png used on input line 371.
+(pdftex.def)             Requested size: 133.07365pt x 133.03377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+[][]
+ []
+
+<Figures/histCNN2.pdf, id=240, 459.6234pt x 455.93588pt>
+File: Figures/histCNN2.pdf Graphic file (type pdf)
+
+<use Figures/histCNN2.pdf>
+Package pdftex.def Info: Figures/histCNN2.pdf used on input line 376.
+(pdftex.def)             Requested size: 133.07697pt x 133.07372pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 390.
+
+<Figures/plotCNN1.png, id=241, 3720.90125pt x 3832.3175pt>
+File: Figures/plotCNN1.png Graphic file (type png)
+
+<use Figures/plotCNN1.png>
+Package pdftex.def Info: Figures/plotCNN1.png used on input line 393.
+(pdftex.def)             Requested size: 133.02689pt x 133.03377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
+[][]
+ []
+
+<Figures/histCNN1.pdf, id=242, 467.29268pt x 455.93588pt>
+File: Figures/histCNN1.pdf Graphic file (type pdf)
+
+<use Figures/histCNN1.pdf>
+Package pdftex.def Info: Figures/histCNN1.pdf used on input line 398.
+(pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
+[][]
+ []
+
+[21 <./Figures/pRF.png> <./Figures/histrf.pdf>] [22 <./Figures/plotCNN2.png> <.
+/Figures/histCNN2.pdf>]
+Underfull \vbox (badness 2134) has occurred while \output is active []
+
+ [23 <./Figures/plotCNN1.png> <./Figures/histCNN1.pdf>] [24]
 5. fejezet.
-[23] [24
+[25
+
+] [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 []\T1/ptm/m/n/12 ^^PPhotometric Reds-hifts.^^Q NA-SA/IPAC Ext-ra-ga-lac-tic Da-
 ta-ba-se - NED,
  []
 
-[25]
-Underfull \hbox (badness 4120) in paragraph at lines 422--423
+[27]
+Underfull \hbox (badness 4120) in paragraph at lines 459--460
 []\T1/ptm/m/n/12 Csabai, I., et al. ^^PMul-ti-di-men-si-o-nal In-dex-ing To-ols
  for the Vir-tu-al Ob-ser-
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 422--423
+Underfull \hbox (badness 2689) in paragraph at lines 459--460
 \T1/ptm/m/n/12 va-to-ry.^^Q Ast-ro-no-mis-che Nach-rich-ten, vol. 328, no. 8, 2
 007, pp. 852^^U857.,
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 428--429
+Underfull \hbox (badness 1546) in paragraph at lines 465--466
 []\T1/ptm/m/n/12 ^^PRandom Fo-rests Leo Bre-iman and Ade-le Cut-ler.^^Q Sta-tis
 -tics at UC Berke-ley,
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 433--435
+Underfull \hbox (badness 2142) in paragraph at lines 470--472
 []\T1/ptm/m/n/12 L., Sa-mu-el, et al. ^^PDon't De-cay the Lear-ning Ra-te, Inc-
 re-a-se the Batch Si-
  []
 
-[26] [27] [28
+[28] [29] [30
 
-] [29] (./szd1.aux)
+] [31] (./szd1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15911 strings out of 492995
- 306764 string characters out of 6132704
- 338114 words of memory out of 5000000
- 19251 multiletter control sequences out of 15000+600000
- 65585 words of font info for 105 fonts, out of 8000000 for 9000
+ 15936 strings out of 492995
+ 307251 string characters out of 6132704
+ 339141 words of memory out of 5000000
+ 19272 multiletter control sequences out of 15000+600000
+ 69009 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,43p,10372b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1411,10 +1483,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on szd1.pdf (33 pages, 4212640 bytes).
+Output written on szd1.pdf (35 pages, 5841651 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 438 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
