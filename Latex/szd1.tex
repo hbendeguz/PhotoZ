@@ -361,6 +361,24 @@ Az egyes hálók bemenetként megkapták az $50\times 50\times 1$ méretű, az a
 \label{rfp}
 \end{figure}
  Ekkora torzítással a magnitúdóadatokon a \textit{random forest} $rmse = 0.0338$ pontossággal tudott becsülni. A becsült és a spektroszkópiai vöröseltolódás-eloszlásokban látszódik a különbség, a prediktált eloszlás görbéje szűkebb, és a csúcs kicsit el van tolódva, ez szisztematikus hiba. A \ref{rfp} bal oldali ábráján látszik, hogy $0.4$-es vöröseltolódás körül vágása van, ez a véletlen erdők extrapolációs képességének hiánya. 
+ 
+ 
+ \section{Konvolúciós háló kiegészítve becsült magnitúdókkal}
+ Neurális hálók tudnak magnitúdókból vöröseltolódást becsülni, de érdekes kipróbálni,hogy hogyan teljesítenek akkor, ha a fényességértékeket csak extra információként kapják meg, a fő adat az ötcsatornás galaxiskép. A magnitúdó adatokat is képekből kell kinyerni, így a \textit{random forest}-nél használt magnitúdó-becslő, tanított hálókat bekötöttem az új háló oldalába, közvetlenül a teljesen összekötött réteg elé. A magnitúdóbecslőket nem tanítottam, hogy ne legyen feleslegesen túl nagy a paraméterszám, ami lassítaná a tanulást. 
+ \newline\indent 
+ A tanítást az 1-es adathalmaz első $\num{100000}$ képén végeztem, a maradék $\num{50000}$-en a tesztelést, majd megvizsgáltam mire képes a 2-es adathalmaz utolsó $\num{20425}$ galaxisán.
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width = 0.8\textwidth]{Figures/magnet.pdf}
+ \caption{A háló sematikus modellje. A magnitúdóbecslő halók kimeneteit és az ötcsatornás képből tanuló konvolúciós rész kimenete közvetlenűl a teljesen összekötött réteg előtt simul egybe.}
+ \label{fig:magnet}
+ \end{figure}
+A 1-es adathalmazon tanult hálót $10$ \textit{epoch} erejéig tanítottam még az 2-es halmazon mielőtt kiértékeltem volna, mert az eltérő tanító-és tesztszett eloszlás problémát jelenthet.\footnote{A felügyelt tanulásnál gyakran alkalmazott az az előfeltételezés, hogy a célváltozó tanító-és teszthalmazának az eloszlása megegyezik. Eltérő esetben, ha tudjuk, hogy a tanuló-és tesztminták nem azonos eloszlásból származnak \textit{covariate shift} módszert lehet alkalmazni a korrigáláshoz \cite{covs}.}
+\newline\indent
+A haló bementként megkapta az ötcsatornás képet egybe, valamint az öt képet egyesével a magnitúdóbecslő hálóknak. Az első konvolúciós réteg ami az ötcsatornás képen lett alkalmazva
+
+ 
+ 
  \section{Egy mély konvolúciós háló}
  A \textit{random forest}nél láthatóan működött a kinyert adatokból a vöröseltolódás-becslés, de kézenfekvőbb olyan módszert megvalósítani, ami kitalálja, hogy mi a fontos tulajdonság a prediktálás szempontjából, és ezt ki is vonja automatikusan a képből.  
  \newline\indent
@@ -381,12 +399,8 @@ Az egyes hálók bemenetként megkapták az $50\times 50\times 1$ méretű, az a
 \end{figure}
 Mindegyik rétegen \textit{ReLU} aktivációt alkalmaztam. A teljesen összekötött rész $\num{4096}$ neuronnal kezdődőtt, majd $400$ neuron a következő rétegben, mind \textit{ReLU} aktivációval, végül az $1$ neuronból álló kimeneti réteg, aktiváció nélkül.
  \newline \indent
-A tanításhoz a megnövekedett paraméterszám miatt több \textit{epoch}ra volt szükség, mint a magnitúdóbecslésnél, összesen $100$ \textit{epoch}-ra, a \textit{learning rate}-et  csökkentettem, ha nem csökkent a hiba értéke, illetve a \textit{batch size}-t növeltem. A 2-es adathalmazon a $\num{20425}$ galaxison tesztelve a $\textit{rmse} = 0.0447$ lett. A \ref{cnn} ábra bal oldalán látható, hogy a prediktált értékeket jelölő pontok szimmetrikusak a $45^{\circ}$-os egyenesre a $0.2$ és $0.45$ közötti vöröseltolódás-tartományon, nincsen szisztematikus hibája. A $0.2$-nél kisebb vöröseltolódásokat gyengén felülbecsli, a $0.5$-nél nagyobb vöröseltolódásúakat pedig alul. Érdemes volt megnézni, hogyan teljesít a háló az 1-es adathalmazon, ahol több alacsony vöröseltolódású galaxist tartalmaz a tesztszett valamint összehasonlítható így a \textit{random forest} módszerrel. 
-\newline\indent 
-A 2-es adathalmazon tanult hálót $10$ \textit{epoch} erejéig tanítottam még az 1-es halmazon mielőtt kiértékeltem volna, mert az eltérő tanító-és tesztszett eloszlás problémát jelenthet.\footnote{A felügyelt tanulásnál gyakran alkalmazott az az előfeltételezés, hogy a célváltozó tanító-és teszthalmazának az eloszlása megegyezik. Eltérő esetben, ha tudjuk, hogy a tanuló-és tesztminták nem azonos eloszlásból származnak \textit{covariate shift} módszert lehet alkalmazni a korrigáláshoz \cite{covs}.}
-A tesztadatokon $\textit{rmse} =0.0296$ hibát produkált, ami jobb mint a \textit{random forest}é, viszont az alacsony vöröseltolódásoknál még mindig enyhén felülbecsül.
-\newline\indent
-Ez a módszer jól alakalmazható a feltételezéssel...
+A tanításhoz a megnövekedett paraméterszám miatt több \textit{epoch}ra volt szükség, mint a magnitúdóbecslésnél, összesen $100$ \textit{epoch}-ra, a \textit{learning rate}-et  csökkentettem, ha nem csökkent a hiba értéke, illetve a \textit{batch size}-t növeltem. A 2-es adathalmazon a $\num{20425}$ galaxison tesztelve a $\textit{rmse} = 0.0447$ lett. A \ref{cnn} ábra bal oldalán látható, hogy a prediktált értékeket jelölő pontok szimmetrikusak a $45^{\circ}$-os egyenesre a $0.2$ és $0.45$ közötti vöröseltolódás-tartományon, nincsen szisztematikus hibája. A $0.2$-nél kisebb vöröseltolódásokat gyengén felülbecsli, a $0.5$-nél nagyobb vöröseltolódásúakat pedig alul. Érdemes volt megnézni, hogyan teljesít a háló az 1-es adathalmazon, ahol több alacsony vöröseltolódású galaxist tartalmaz a tesztszett, valamint így összehasonlítható a \textit{random forest} módszerrel. Mielőtt prediktáltattam volna a modellt, tanítottam $10$ \textit{epoch}-ot az 1-es adathalmazon.
+
 \begin{figure}[]
  \centering
   \begin{subfigure}[b]{0.3\textwidth}
@@ -401,7 +415,12 @@ Ez a módszer jól alakalmazható a feltételezéssel...
   \caption{A konvolúciós neurális háló becslései a spektroszkópiai vöröseltolódás-értékek függvényében a 1-es adathalmazon, és a vöröseltolódás-eloszlások.}
 \label{cnn1}
 \end{figure}
-\section{Mély konvolóciós háló kiegészítve magnitúdóadatokkal}
+
+A tesztadatokon $\textit{rmse} =0.0295$ hibát produkált, ami jobb mint a \textit{random forest}é, viszont az alacsony vöröseltolódásoknál még mindig enyhén felülbecsül. Megjegyezendő, hogy az 2-es tanítóhalmaz és az 1-es teszthalmaz $2.6\%$-ban átfed, ez okozhat \textit{rmse} csökkenést, de nem nagy mértékben, a tanítóhalmazban a modell által már látott galaxisok vöröseltolódás-becslésének hibáját $0$-nak véve, a csak teszthalmazban megkapott mintákon a $rmse = 0.0298$.
+\newline\indent
+Ez a módszer jól alakalmazható a feltételezéssel...
+
+
   \chapter{Összegzés}
 \newpage
 
