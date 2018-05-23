@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 MAY 2018 21:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 MAY 2018 18:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -932,6 +932,30 @@ LaTeX Warning: Label `fig:2' multiply defined.
 LaTeX Warning: Label `sub@fig:2' multiply defined.
 
 
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:2' multiply defined.
+
+
 LaTeX Warning: Label `mlrstwo' multiply defined.
 
 )
@@ -1373,100 +1397,150 @@ File: Figures/magnet.pdf Graphic file (type pdf)
 <use Figures/magnet.pdf>
 Package pdftex.def Info: Figures/magnet.pdf used on input line 372.
 (pdftex.def)             Requested size: 354.86412pt x 144.89445pt.
- [21 <./Figures/pRF.png> <./Figures/histrf.pdf>]
-<Figures/plotCNN2.png, id=282, 3656.66125pt x 3832.3175pt>
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 379.
+
+<Figures/plotCNN1M.png, id=240, 3693.8pt x 3815.25375pt>
+File: Figures/plotCNN1M.png Graphic file (type png)
+
+<use Figures/plotCNN1M.png>
+Package pdftex.def Info: Figures/plotCNN1M.png used on input line 382.
+(pdftex.def)             Requested size: 133.07251pt x 133.02357pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
+[][]
+ []
+
+<Figures/histCNN1M.pdf, id=241, 467.29268pt x 455.93588pt>
+File: Figures/histCNN1M.pdf Graphic file (type pdf)
+
+<use Figures/histCNN1M.pdf>
+Package pdftex.def Info: Figures/histCNN1M.pdf used on input line 387.
+(pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+[][]
+ []
+
+<Figures/plotCNN2M.png, id=242, 3630.56375pt x 3815.25375pt>
+File: Figures/plotCNN2M.png Graphic file (type png)
+
+<use Figures/plotCNN2M.png>
+Package pdftex.def Info: Figures/plotCNN2M.png used on input line 398.
+(pdftex.def)             Requested size: 133.06567pt x 133.02357pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
+[][]
+ []
+
+<Figures/histCNN2M.pdf, id=243, 459.6234pt x 455.93588pt>
+File: Figures/histCNN2M.pdf Graphic file (type pdf)
+
+<use Figures/histCNN2M.pdf>
+Package pdftex.def Info: Figures/histCNN2M.pdf used on input line 403.
+(pdftex.def)             Requested size: 133.07697pt x 133.07372pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./Figures/pRF.png> <./Figures/histrf.pdf>] [22 <./Figures/magnet.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23 <./Figures/plotCNN1M.png> <./Figures/histCNN1M.pdf>]
+<Figures/plotCNN2.png, id=336, 3656.66125pt x 3832.3175pt>
 File: Figures/plotCNN2.png Graphic file (type png)
 
 <use Figures/plotCNN2.png>
-Package pdftex.def Info: Figures/plotCNN2.png used on input line 386.
+Package pdftex.def Info: Figures/plotCNN2.png used on input line 418.
 (pdftex.def)             Requested size: 133.07365pt x 133.03377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--388
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
 [][]
  []
 
-<Figures/histCNN2.pdf, id=283, 459.6234pt x 455.93588pt>
+<Figures/histCNN2.pdf, id=337, 459.6234pt x 455.93588pt>
 File: Figures/histCNN2.pdf Graphic file (type pdf)
 
 <use Figures/histCNN2.pdf>
-Package pdftex.def Info: Figures/histCNN2.pdf used on input line 391.
+Package pdftex.def Info: Figures/histCNN2.pdf used on input line 423.
 (pdftex.def)             Requested size: 133.07697pt x 133.07372pt.
- [22 <./Figures/magnet.pdf>] [23 <./Figures/plotCNN2.png> <./Figures/histCNN2.p
-df>]
+ [24 <./Figures/plotCNN2M.png> <./Figures/histCNN2M.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 401.
+               Default added (so using `tbp') on input line 433.
 
-<Figures/plotCNN1.png, id=334, 3720.90125pt x 3832.3175pt>
+<Figures/plotCNN1.png, id=380, 3720.90125pt x 3832.3175pt>
 File: Figures/plotCNN1.png Graphic file (type png)
 
 <use Figures/plotCNN1.png>
-Package pdftex.def Info: Figures/plotCNN1.png used on input line 404.
+Package pdftex.def Info: Figures/plotCNN1.png used on input line 436.
 (pdftex.def)             Requested size: 133.02689pt x 133.03377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 [][]
  []
 
-<Figures/histCNN1.pdf, id=335, 467.29268pt x 455.93588pt>
+<Figures/histCNN1.pdf, id=381, 467.29268pt x 455.93588pt>
 File: Figures/histCNN1.pdf Graphic file (type pdf)
 
 <use Figures/histCNN1.pdf>
-Package pdftex.def Info: Figures/histCNN1.pdf used on input line 409.
+Package pdftex.def Info: Figures/histCNN1.pdf used on input line 441.
 (pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 [][]
  []
 
-[24 <./Figures/plotCNN1.png> <./Figures/histCNN1.pdf>]
+[25 <./Figures/plotCNN2.png> <./Figures/histCNN2.pdf>] [26 <./Figures/plotCNN1.
+png> <./Figures/histCNN1.pdf>]
 5. fejezet.
-[25
+[27
 
-] [26
+] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
 []\T1/ptm/m/n/12 ^^PPhotometric Reds-hifts.^^Q NA-SA/IPAC Ext-ra-ga-lac-tic Da-
 ta-ba-se - NED,
  []
 
-[27]
-Underfull \hbox (badness 4120) in paragraph at lines 475--476
+[29]
+Underfull \hbox (badness 4120) in paragraph at lines 507--508
 []\T1/ptm/m/n/12 Csabai, I., et al. ^^PMul-ti-di-men-si-o-nal In-dex-ing To-ols
  for the Vir-tu-al Ob-ser-
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 475--476
+Underfull \hbox (badness 2689) in paragraph at lines 507--508
 \T1/ptm/m/n/12 va-to-ry.^^Q Ast-ro-no-mis-che Nach-rich-ten, vol. 328, no. 8, 2
 007, pp. 852^^U857.,
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 481--482
+Underfull \hbox (badness 1546) in paragraph at lines 513--514
 []\T1/ptm/m/n/12 ^^PRandom Fo-rests Leo Bre-iman and Ade-le Cut-ler.^^Q Sta-tis
 -tics at UC Berke-ley,
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 486--488
+Underfull \hbox (badness 2142) in paragraph at lines 518--520
 []\T1/ptm/m/n/12 L., Sa-mu-el, et al. ^^PDon't De-cay the Lear-ning Ra-te, Inc-
 re-a-se the Batch Si-
  []
 
-[28] [29] [30
+[30] [31] [32
 
-] [31] (./szd1.aux)
+] [33] (./szd1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15942 strings out of 492995
- 307364 string characters out of 6132704
- 338152 words of memory out of 5000000
- 19277 multiletter control sequences out of 15000+600000
+ 15964 strings out of 492995
+ 307841 string characters out of 6132704
+ 340174 words of memory out of 5000000
+ 19295 multiletter control sequences out of 15000+600000
  69009 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,43p,10372b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1487,10 +1561,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on szd1.pdf (35 pages, 5846631 bytes).
+Output written on szd1.pdf (37 pages, 7611706 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 535 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

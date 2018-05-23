@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{16}
 \contentsline {chapter}{\numberline {4}M\IeC {\'o}dszerek \IeC {\'e}s eredm\IeC {\'e}nyek}{19}
 \contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{19}
-\contentsline {section}{\numberline {4.2}Konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o} kieg\IeC {\'e}sz\IeC {\'\i }tve becs\IeC {\"u}lt magnit\IeC {\'u}d\IeC {\'o}kkal}{21}
-\contentsline {section}{\numberline {4.3}Egy m\IeC {\'e}ly konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o}}{22}
-\contentsline {chapter}{\numberline {5}\IeC {\"O}sszegz\IeC {\'e}s}{25}
-\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{27}
+\contentsline {section}{\numberline {4.2}Konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o} kieg\IeC {\'e}sz\IeC {\'\i }tve becs\IeC {\"u}lt magnit\IeC {\'u}d\IeC {\'o}kkal}{22}
+\contentsline {section}{\numberline {4.3}Egy m\IeC {\'e}ly konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o}}{24}
+\contentsline {chapter}{\numberline {5}\IeC {\"O}sszegz\IeC {\'e}s}{27}
+\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{29}
