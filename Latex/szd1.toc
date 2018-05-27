@@ -1,19 +1,19 @@
-\contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{3}
-\contentsline {chapter}{\numberline {2}V\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s \IeC {\'e}s g\IeC {\'e}pi tanul\IeC {\'a}s}{5}
-\contentsline {section}{\numberline {2.1}Fotometrikus v\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s}{5}
-\contentsline {section}{\numberline {2.2}A g\IeC {\'e}pi tanul\IeC {\'a}si m\IeC {\'o}dszerek}{7}
-\contentsline {subsection}{\numberline {2.2.1}\textit {Random Forest}}{8}
-\contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{8}
-\contentsline {section}{\numberline {2.3}Eddigi eredm\IeC {\'e}nyek \IeC {\'e}s m\IeC {\'o}dszerek \IeC {\'a}ttekint\IeC {\'e}se}{12}
-\contentsline {chapter}{\numberline {3}Adatok}{15}
-\contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{15}
-\contentsline {section}{\numberline {3.2}A tan\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{16}
-\contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{18}
-\contentsline {chapter}{\numberline {4}M\IeC {\'o}dszerek \IeC {\'e}s eredm\IeC {\'e}nyek}{21}
-\contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{21}
-\contentsline {section}{\numberline {4.2}Konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o} kieg\IeC {\'e}sz\IeC {\'\i }tve becs\IeC {\"u}lt magnit\IeC {\'u}d\IeC {\'o}kkal}{24}
-\contentsline {section}{\numberline {4.3}Egy m\IeC {\'e}ly konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o}}{26}
-\contentsline {section}{\numberline {4.4}Teljesen \IeC {\"o}sszek\IeC {\"o}t\IeC {\"o}tt neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}}{28}
-\contentsline {section}{\numberline {4.5}Eredm\IeC {\'e}nyek \IeC {\"o}sszegz\IeC {\'e}se}{30}
-\contentsline {chapter}{\numberline {5}\IeC {\"O}sszefoglal\IeC {\'a}s}{33}
-\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{35}
+\contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{2}
+\contentsline {chapter}{\numberline {2}V\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s \IeC {\'e}s g\IeC {\'e}pi tanul\IeC {\'a}s}{4}
+\contentsline {section}{\numberline {2.1}Fotometrikus v\IeC {\"o}r\IeC {\"o}seltol\IeC {\'o}d\IeC {\'a}s-becsl\IeC {\'e}s}{4}
+\contentsline {section}{\numberline {2.2}A g\IeC {\'e}pi tanul\IeC {\'a}si m\IeC {\'o}dszerek}{6}
+\contentsline {subsection}{\numberline {2.2.1}\textit {Random Forest}}{7}
+\contentsline {subsection}{\numberline {2.2.2}Mesters\IeC {\'e}ges neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k}{7}
+\contentsline {section}{\numberline {2.3}Eddigi eredm\IeC {\'e}nyek \IeC {\'e}s m\IeC {\'o}dszerek \IeC {\'a}ttekint\IeC {\'e}se}{11}
+\contentsline {chapter}{\numberline {3}Adatok}{14}
+\contentsline {section}{\numberline {3.1}Sloan Digital Sky Survey}{14}
+\contentsline {section}{\numberline {3.2}A tan\IeC {\'\i }t\IeC {\'o}halmaz elk\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{15}
+\contentsline {section}{\numberline {3.3}Adatexplor\IeC {\'a}ci\IeC {\'o}}{17}
+\contentsline {chapter}{\numberline {4}M\IeC {\'o}dszerek \IeC {\'e}s eredm\IeC {\'e}nyek}{19}
+\contentsline {section}{\numberline {4.1}Neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}k \IeC {\'e}s Random Forest kombin\IeC {\'a}lva}{19}
+\contentsline {section}{\numberline {4.2}Konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o} kieg\IeC {\'e}sz\IeC {\'\i }tve becs\IeC {\"u}lt magnit\IeC {\'u}d\IeC {\'o}kkal}{22}
+\contentsline {section}{\numberline {4.3}Egy m\IeC {\'e}ly konvol\IeC {\'u}ci\IeC {\'o}s h\IeC {\'a}l\IeC {\'o}}{24}
+\contentsline {section}{\numberline {4.4}Teljesen \IeC {\"o}sszek\IeC {\"o}t\IeC {\"o}tt neur\IeC {\'a}lis h\IeC {\'a}l\IeC {\'o}}{26}
+\contentsline {section}{\numberline {4.5}Eredm\IeC {\'e}nyek \IeC {\"o}sszegz\IeC {\'e}se}{28}
+\contentsline {chapter}{\numberline {5}\IeC {\"O}sszefoglal\IeC {\'a}s}{30}
+\contentsline {chapter}{Irodalomjegyz\IeC {\'e}k}{31}
