@@ -18,11 +18,35 @@
 \usepackage{siunitx}
 \usepackage{ulem}
 \usepackage{bm}
+\usepackage{url}
+\usepackage{listings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
 \linespread{1.5}
+\usepackage{appendix}
+\renewcommand\appendixtocname{Függelék}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 \usepackage{anysize}
 \marginsize{3cm}{3cm}{2cm}{2cm}
+\lstset{frame=tb,
+  language=python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 \makeatletter
 \def\footnoterule{\kern-3\p@
@@ -154,7 +178,7 @@ Szeretném megköszönni Csabai Istvánnak, hogy elvállalta a témavezetésem, 
 
 
 \chapter{Bevezetés}
-Az Univerzum nagy skálás szerkezetének megértéséhez szükséges, hogy térképet tudjunk készíteni a galaxisok elhelyezkedéséről. Két koordinátát, a galaktikusszélességet és galaktikushosszúságot könnyen megkaphatjuk, viszont a  távolság meghatározása már nehezebb feladat. A  trigonometrikus parallaxis módszer a legjobb technikákkal is csak galaxison belül működik, a jó \textit{seeing} érdekében pedig űrtávcső kell.  A standard gyertya módszerek pontos távolságértéket adnak, de csak néhány százmillió fényév távolságon belül alkalmazhatóak, ezért kell egy olyan módszer, amivel távolabb is mérhetünk, pontosan. 
+Az Univerzum nagy skálás szerkezetének megértéséhez szükséges, hogy térképet tudjunk készíteni a galaxisok elhelyezkedéséről. Két koordinátát, a galaktikusszélességet és galaktikushosszúságot könnyen megkaphatjuk, viszont a  távolság meghatározása már nehezebb feladat. A  trigonometrikus parallaxis módszer a legjobb technikákkal is csak galaxison belül működik, a jó \textit{seeing} érdekében pedig űrtávcső kell.  A standard gyertya módszerek pontos távolságértéket adnak, viszont a cefeidák, mint viszonyítási pontok csak néhány százmillió fényév távolságon belül alkalmazhatóak, szupernóvákat pedig csak kevés galaxisban lehet látni, így ezt a módszert sem lehet mindig alkalmazni, ezért kell egy olyan technika, amivel távolabb is mérhetünk, pontosan, sok galaxisra. 
 \newline \indent
 A XX. század elején Edwin Hubble és Vesto Slipher a galaxisok színképének tanulmányozása során észrevették, hogy a színképek eltolódnak a nagyobb hullámhosszak, a vörös színtartomány felé a laboratóriumban mért vonalszerkezethez képest, a galaxis vöröseltolódást szenved. Hubble méréseket készített a galaxisok távolságáról és vöröseltolódásáról, és lineáris összefüggést tapasztalt, amit a később róla elnevezett törvény ír le:
 \begin{equation}
@@ -162,7 +186,7 @@ v = H\cdot d,
 \end{equation}
 az arányossági tényező a Hubble-állandó, értéke $ H = 73.45\pm1.66$ \textit{km/Mpc}. Ez az összefüggés lehetőséget ad  a pontos távolságmérésre, ha  a galaxisok vöröseltolódását meg tudjuk mérni. 
 \newline \indent
-Vöröseltolódás mérésére a legpontosabb módszer felvenni az objektum spektroszkópiai képét, és megnézni, hogy a jellegzetes vonalak mennyire csúsztak el. A megfelelő minőségű spektrum felvételéhez akár egy órányi távcsőidő is szükséges lehet, ezért sokáig nem is készültek égbolttérképek. Az 1986-ban Margaret Geller és munkatársai által készítet égtérkép csupán egy vékony szeletet fedett le az égből, de már azon is kirajzolódott, hogy a galaxiseloszlás nem egyenletes azon a skálán. Gellerék térképén a legtávolabbi galaxisok körülbelül 200 \textit{Mpc} távolságnyira voltak tőlünk, ezért indokolt volt elkészíteni egy még távolabb látó térképet. A \textit{BEKS} égfelmérés szűkebb, $1\times 1$ négyzetfokos tartományban, ceruzaszerűen\footnote{pencil-beam survey} nézett 1000-1000 \textit{Mpc} távolságba mindkét irányba, és ezen a skálán is kirajzolódótt struktúra az anyageloszlásban, és a sűrűség ingadozás periodikusnak mutatkozott. Nagy távolságokra csökkent az észlelt galaxisszám, ez a halványabb galaxisok nehezebb észlelhetősége miatt volt. A technikai fejlődésnek köszönhetően elkészülhettek olyan kisérleti berendezések, amelyek lehetővé tették valódi háromdimenzióban a galaxisok pontos helyzetének felmérését. A Sloan Digital Sky Survey egyike ezen eszközöknek, első fázisában 1 millió objektum spektrumát vette fel négy év alatt\cite{fr}. Ez a sebeség nem kielégítő, ezért felmerült az igény, hogy a vöröseltolódásokat fotometriai úton mérjék. A fotometriával mért vöröseltolódások kicsit pontatlanabbak, de mérésük gyorsabb mint spekroszkópiával, ezenkívűl halványabb objektumokat is lehet vele mérni, magasabban van a magnitúdó korlát. Ezen tulajdonságok vonzóvá teszik a fotometriai a vöröseltolódás-becslő módszereket. A technológiai fejlődés nem csak a csillagászatot érintette, egyre erősebb grafikus proceszorok jelentek meg, amik lehetővé teszik gépi tanulási módszerek szélesebb problémakörre való alkalmazását, mint például a vöröseltolódás-becslést fotometriai adatokból.
+Vöröseltolódás mérésére a legpontosabb módszer felvenni az objektum spektroszkópiai képét, és megnézni, hogy a jellegzetes vonalak mennyire csúsztak el. A megfelelő minőségű spektrum felvételéhez akár egy órányi távcsőidő is szükséges lehet, ezért sokáig nem is készültek égbolttérképek. Az 1986-ban Margaret Geller és munkatársai által készítet égtérkép\cite{mg} csupán egy vékony szeletet fedett le az égből, de már azon is kirajzolódott (lásd \ref{MGM} függelék), hogy a galaxiseloszlás nem egyenletes azon a skálán. Gellerék térképén a legtávolabbi galaxisok körülbelül 200 \textit{Mpc} távolságnyira voltak tőlünk, ezért indokolt volt elkészíteni egy még távolabb látó térképet. A \textit{BEKS}\cite{beks} égfelmérés szűkebb, $1\times 1$ négyzetfokos tartományban, ceruzaszerűen\footnote{pencil-beam survey} nézett 1000-1000 \textit{Mpc} távolságba mindkét irányba, és ezen a skálán is kirajzolódótt struktúra az anyageloszlásban, és a sűrűség ingadozás periodikusnak mutatkozott. Nagy távolságokra csökkent az észlelt galaxisszám, ez a halványabb galaxisok nehezebb észlelhetősége miatt volt. A technikai fejlődésnek köszönhetően elkészülhettek olyan kisérleti berendezések, amelyek lehetővé tették valódi háromdimenzióban a galaxisok pontos helyzetének felmérését. A Sloan Digital Sky Survey egyike ezen eszközöknek, első fázisában 1 millió objektum spektrumát vette fel négy év alatt\cite{fr}. Ez a sebeség nem kielégítő, ezért felmerült az igény, hogy a vöröseltolódásokat fotometriai úton mérjék. A fotometriával mért vöröseltolódások kicsit pontatlanabbak, de mérésük gyorsabb mint spekroszkópiával, ezenkívűl halványabb objektumokat is lehet vele mérni, magasabban van a magnitúdó korlát. Ezen tulajdonságok vonzóvá teszik a fotometriai a vöröseltolódás-becslő módszereket. A technológiai fejlődés nem csak a csillagászatot érintette, egyre erősebb grafikus proceszorok jelentek meg, amik lehetővé teszik gépi tanulási módszerek szélesebb problémakörre való alkalmazását, mint például a vöröseltolódás-becslést fotometriai adatokból.
 \newline \indent
 Dolgozatom célja az általam készített, gépi tanuláson alapuló fotometrikus vöröseltolódás-becslő módszerek bemutatása, amelyek a galaxisok képeit használjaák fel fotometriaia adatként. 
 
@@ -187,11 +211,18 @@ A fotometrikus vöröseltolódás-becslésben a várt végeredmény jól meghat�
 Felügyelt tanulásnál rendelkezésünkre áll egy $(x_1, y_1), (x_2, y_2),...(x_N, y_N)$ adathalmaz, ahol $x_i$ egy mintát jelöl és a tulajdonságok(\textit{features}) számával megegyező dimenziójú vektor, $y_i$ jelöli az osztálycímkét vagy a minta értékét regressziós problámákban, dimenziója az osztályok számával megegyező. A feladat, hogy a gép megtalálja azt a leképzést, a tanítóhalmaz mintái alapján, ami a lehető legkisebb hibával képez $x_i$-ből $y_i$-be még nem látott minták esetén is. A hiba mérését az adatokhoz és a feladathoz illő metrikával kell végezni. A kutatáshoz kétféle módszert használtam, \textit{random forest regressort} és neurális hálókat. 
 %\newline \indent
 \subsection{\textit{Random Forest}}
-A \textit{random forest} algoritmus egyik jó tulajdonsága, hogy alkalmazható klasszifikációs és regressziós problémákra is, alapját a döntési fák sokasága képezi, amiket összefűzve pontosabb becslést tud adni. A döntési fák felépülése a gyökér csomópontnál kezdődik, ami tartalmazza a tulajdonságokat és a célértéket. A csomópontnál meglévő jellemzőket felosztják az így létrejövő utódpontok között, igyekezve a hibát minimalizálni. A folyamatot tovább iterálva létrejön egy rétege a csomópontoknak, amelyek így egy fát alkotnak. A fa kialakulását szabályozni lehet paraméterekkel. Ilyen paraméter lehet, hogy hány hány rétegű, milyen mély legyen a fa, minimum hány elem kerüljön egy levélbe\footnote{levél a döntési fának az a része, amiből nem nő ki több ág}, minimum hány felé legyen osztva a minta egy csomópontnál, vagy milyen módon mérje a szétválasztás minőségét. Véletlenség az erdőbe úgy kerül, ha az egyes fáknál a szétválasztás a csomópontoknál nem a lehető legjobb \textit{split} szerint történik, hanem véletlenszerűen kiválasztott részét kapják meg a  tulajdonságoknak. Erre azért van szükség, mert a fontosabb tulajdonságok dominálnának mindegyik fa döntésében, így az egyes fák predikciói korreláltak lennének \cite{randomF}. Az erdőbe több fát adva az algoritmus nem tanul túl, becslései jobban konvergálnak a kívánt végeredményhez, de határértéke van a hibának \cite{rf2}. Előnye még, hogy felfedi a prediktálás szempontjából fontos tulajdonságokat, 
+A \textit{random forest} algoritmus egyik jó tulajdonsága, hogy alkalmazható klasszifikációs és regressziós problémákra is, alapját a döntési fák sokasága képezi, amiket összefűzve pontosabb becslést tud adni. A döntési fák felépülése a gyökér csomópontnál kezdődik, ami tartalmazza a tulajdonságokat és a célértéket. A csomópontnál meglévő jellemzőket felosztják az így létrejövő utódpontok között, igyekezve a hibát minimalizálni. A folyamatot tovább iterálva létrejön egy rétege a csomópontoknak, amelyek így egy fát alkotnak. 
+\begin{figure}[h!]
+\centering
+\includegraphics[height=70mm]{Figures/rf2.png}
+\caption[RF]{A \textit{random forest} működése. Az ábra forrása:\cite{rfp}}
+\end{figure}
+
+A fa kialakulását szabályozni lehet paraméterekkel. Ilyen paraméter lehet, hogy hány hány rétegű, milyen mély legyen a fa, minimum hány elem kerüljön egy levélbe\footnote{levél a döntési fának az a része, amiből nem nő ki több ág}, minimum hány felé legyen osztva a minta egy csomópontnál, vagy milyen módon mérje a szétválasztás minőségét. Véletlenség az erdőbe úgy kerül, ha az egyes fáknál a szétválasztás a csomópontoknál nem a lehető legjobb \textit{split} szerint történik, hanem véletlenszerűen kiválasztott részét kapják meg a  tulajdonságoknak. Erre azért van szükség, mert a fontosabb tulajdonságok dominálnának mindegyik fa döntésében, így az egyes fák predikciói korreláltak lennének \cite{randomF}. Az erdőbe több fát adva az algoritmus nem tanul túl, becslései jobban konvergálnak a kívánt végeredményhez, de határértéke van a hibának \cite{rf2}. Előnye még, hogy felfedi a prediktálás szempontjából fontos tulajdonságokat, 
 sok attribútummal rendelkező adathalmazoknál ez segíthet az összefüggések megértésében. A fő korlátai, hogy a túl sok fa lassú prediktálást eredményez, illetve regressziós problámáknál a modell nem tud extrapolálni, csak a tanulóhalmaz értékkészletein belüli eredményeket ad. Komplexebb vagy zajosabb adatoknál érdemes máshogy próbálkozni, ezen esetekben például mesterséges neurális hálókkal jobb eredményt lehet elérni.
 %\newline \indent
 \subsection{Mesterséges neurális hálók}
-A mesterséges neurális háló egy leegyszerűsített modellje a biológiai neurális hálónak, megtartva annak jó tulajdonságait és a tanulás mechanizmusát. Alap építőkövei a neuronok és a súlyok\footnote{biológiai analógiája az axonok}, a neuronok a súlyokon keresztül vannak összekötve egymással és ezek adják meg, hogy az egyik neurontól a másik milyen súllyal kapja meg az értékét. A neuronok rétegekbe vannak rendezve: bemeneti réteg, köztes réteg és kimeneti réteg\footnote{input layer, hidden layer és output layer}, a köztes réteg több rétegből is állhat. Az egyazon rétegben lévő neuronok nincsenek összekötve egymással, értéküket az alattuk lévő neuronoktól kapják a súlyokkal számolva. Matematikai formában az értékátadás:
+A mesterséges neurális hálók megalkotásához a valódi idegrendszer adta a motivációt, de megvalósításához leegyszerűsített, absztrahált neuronokat használtak. Alap építőkövei a neuronok és a súlyok\footnote{biológiai analógiája az axonok}, a neuronok a súlyokon keresztül vannak összekötve egymással és ezek adják meg, hogy az egyik neurontól a másik milyen súllyal kapja meg az értékét. A neuronok rétegekbe vannak rendezve: bemeneti réteg, köztes réteg és kimeneti réteg\footnote{input layer, hidden layer és output layer}, a köztes réteg több rétegből is állhat. Az egyazon rétegben lévő neuronok nincsenek összekötve egymással, értéküket az alattuk lévő neuronoktól kapják a súlyokkal számolva. Matematikai formában az értékátadás:
 \begin{equation}
 z_i = w_{i1}x_1 + w_{i2}x_{2} + ... + w_{in}x_n + b_i, 
 \end{equation}
@@ -207,7 +238,7 @@ Ez átírható egy egész rétegre:
 %%
 A $\bold{W}$ a $w_{ij}$ súlyokból képzett súlymátrixot jelöli. Ahhoz, hogy a háló bonyolultabb problémákat is meg tudjon oldani, szükséges nemlinearitást vinni a rendszerbe. Ehhez  aktivációs függvényt alkalmazunk, ami eldönti, hogy a neuron aktivizált legyen vagy sem.  
 %%% begin fig
-\begin{figure}[]
+\begin{figure}[h!]
 \centering
 \hspace{-2.8 cm}
 \begin{subfigure}[b]{0.3\textwidth}
@@ -224,45 +255,46 @@ Gyakran alkalmazott aktivációs függvény a \textit{sigmoid}:
 \begin{equation}
 S(z) = \frac{1}{1 + e^{-z}}
 \end{equation}
-Illetve a \textit{rectified linear unit}(ReLU):
+Illetve a \textit{rectified linear unit}(\textit{ReLU}):
 \begin{equation}
 R(z) = \max{(0, z)}
 \end{equation}
-A ReLU előnye, hogy a súlyok optimalizálásánál történő deriválásoknál az eltünő gradiens problémája nem áll fenn, így gyorsabb tanulást eredményez és a \textit{sigmoidhoz} képest nem olyan szűk intervallumon ad vissza értékeket. A bemenő adatok ilyen transzformációkon mennek keresztül, míg kimenő adatként össze lehet hasonlítani a várt kimenettel. Az összehasonlítás a hibafügvénnyel történik, ami kiszámolja a két érték közötti távolságot valamilyen metrikával. Legtöbbször a hibafüggvényt több különböző adat becslése után értékeltetjük ki, a háló \textit{batch}-okban kapja meg az adatot. Regressziós problémákban kedvelt hibafüggvény a \textit{mean sqared error}:
+A \textit{ReLU} előnye, hogy a súlyok optimalizálásánál történő deriválásoknál az eltünő gradiens problémája nem áll fenn, így gyorsabb tanulást eredményez és a \textit{sigmoidhoz} képest nem olyan szűk intervallumon ad vissza értékeket. A bemenő adatok ilyen transzformációkon mennek keresztül, míg kimenő adatként össze lehet hasonlítani a várt kimenettel. Az összehasonlítás a hibafügvénnyel történik, ami kiszámolja a két érték közötti távolságot valamilyen metrikával. Legtöbbször a hibafüggvényt több különböző adat becslése után értékeltetjük ki, a háló \textit{batch}-okban kapja meg az adatot. Regressziós problémákban kedvelt hibafüggvény a jósolt és a valós értékek közötti átlagos négyzetes eltérés\footnote{\textit{mean sqared error}} használata:
 \begin{equation}
 MSE = \frac{1}{n}\sum^n_{i =0}(y_i -p(x_i))^2
 \end{equation}
-a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \textit{batch} méret. A hiba minimalizálása egy optimalizációs probléma, a $p$ függvény a súlyoktól függ, amiket úgy kell megváltoztatni, hogy a hiba minimális legyen. A súlyok optimalizálása \textit{backpropagation}-nel történik, a hibafüggvényt deriválva a súlyok szerint a láncszabállyal, az utolsó rétegtől kezdve az elejéig, megkapjuk a gradiensmátrixokat rétegenként, amit szorozva egy kis számmal(\textit{learning rate}), levonva a súlymátrixokból megkapjuk az új súlyokat. A súlyok frissítése \textit{batch}-onként történik, így a \textit{batch}mérettel és a \textit{learning rate}-tel is lehet a tanulást gyorsítani, majd pontosabbá tenni \cite{batchs}.
+a képletben a $p(x_i)$ az $x_i$ adatokból prediktált érték, $n$ pedig a \textit{batch} méret. A hiba minimalizálása egy optimalizációs probléma, a $p$ függvény a súlyoktól függ, amiket úgy kell megváltoztatni, hogy a hiba minimális legyen. A súlyok optimalizálása \textit{backpropagation}-nel történik, a hibafüggvényt deriválva a súlyok szerint a láncszabállyal, az utolsó rétegtől kezdve az elejéig, megkapjuk a gradiensmátrixokat rétegenként, amit szorozva egy kis számmal(tanulási ráta\footnote{\textit{learning rate}}), levonva a súlymátrixokból megkapjuk az új súlyokat. A súlyok frissítése \textit{batch}-onként történik, így a \textit{batch}mérettel és a \textit{learning rate}-tel is lehet a tanulást gyorsítani, majd pontosabbá tenni \cite{batchs}.
 %%% Architektúrák és CNN !!!
 \newline\indent
 A hálók architektúrájának kialakítására nincs általános szabály, intuíciónkra és hasonló problémámkon jól szereplő hálók mintájára kell hagyatkozni, tanulásából következtetéseket levonni és alakítgatni. Általánosságban a komplexebb problémákhoz \textit{mélyebb}, több neuronból álló hálók kellenek, de ekkor a beállítandó paraméterek száma is nagyobb lesz, a tanítás lassabb lesz a megnövekedett számítási igény miatt. Képi adatoknál a paraméterek száma nagyon magas lenne, valamint a képnek nem az egész része érdekes, csupán részletek, és ezek a részletek bárhol lehetnek a képen, ezért nem célszerű teljesen összekötött neurális hálókat használni. Ezeknek a problémáknak a megoldására találták ki a konvolúciós neurális hálókat.
 \newline\indent
-A konvolúciós hálókban a rétegek között nincs teljes összeköttetés, a neuron csak az alatta lévő neuronnal, és annak szomszédaihoz kötődik. Az objektumfelismerő-osztályozó problémáknál az objektum bárhol előfordulhat a képen, ezért a neuronokat összekötő súlyoknak is eltolás invariánsank kell lennie, ezért egy rétegben minden neuron ugyanazokkal súlyokkal összegzi az allata lévő neuron szomszédainak kimenetét. A figyelembe vett szomszédok száma meghatároz egy \textit{filter} méretet, a \textit{filter} technikailag egy tenzor, aminek elemei a súlyok. A bemeneti képet végig páztázza a \textit{filter}, és végrehajta az összegzéseket, az egyes kimenetek egy \textit{aktivációs térképet alkotnak}\footnote{szokásos feature map-nek is nevezni.}, amire alkalmazhatjuk a következő réteg konvolúciós réteget. Ez a műveleletet kétdimenziós diszkrét konvolúció a matematikában. A kimeneti \textit{aktivációs térkép} formája egy $n$ széles és hosszú, $c$ csatornával rendelkező képen alkalmazott $f\times f$ méretű, $s$ ugrással mintavételező \textit{filter}-rel, a képre $p$ \textit{padding}\footnote{kép szélén nullákkal létrehozott keret}-et alkalmazva a konvolúció során a következő képpen alakulnak:
+A konvolúciós hálókban a rétegek között nincs teljes összeköttetés, a neuron csak az alatta lévő neuronnal, és annak szomszédaihoz kötődik. Az objektumfelismerő-osztályozó problémáknál az objektum bárhol előfordulhat a képen, ezért a neuronokat összekötő súlyoknak is eltolás invariánsank kell lennie, ezért egy rétegben minden neuron ugyanazokkal súlyokkal összegzi az allata lévő neuron szomszédainak kimenetét. A figyelembe vett szomszédok száma meghatároz egy \textit{filter} méretet, a \textit{filter} technikailag egy tenzor, aminek elemei a súlyok. A bemeneti képet végig páztázza a \textit{filter}, és végrehajta az összegzéseket, az egyes kimenetek egy \textit{aktivációs térképet alkotnak}\footnote{szokásos feature map-nek is nevezni.}, amire alkalmazhatjuk a következő réteg konvolúciós réteget. Ez a műveleletet kétdimenziós diszkrét konvolúció a matematikában. A kimeneti \textit{aktivációs térkép} formája egy $n$ széles és hosszú képen alkalmazott $f\times f$ méretű, $s$ ugrással mintavételező \textit{filterrel}, a képre $p$ \textit{padding}\footnote{kép szélén nullákkal létrehozott keret}-et alkalmazva a konvolúció során a következő képpen alakulnak:
 \begin{equation}
 a = \frac{n+2p-f}{s} +1,
 \end{equation}
-a képleteben $a$ létrejövő \textit{aktivációs térkép} szélessége, $k$ \textit{filter}t alkalmazva $a\times a\times k$ alakú \textit{aktivációs térképet} kapunk. Az \textit{aktivációs térképek} méretét csökkenteni kell az első kettő dimenziójában, $k$ a \textit{filterek} számával lesz egyenlő. Erre egy módszer a \textit{pooling}. A \textit{poolingoknak} sok fajtája van, legnépszerűbb a \textit{Maxpooling} és az \textit{AveragePooling}, alapja, hogy a \textit{filterek}hez hasonlóan végig pásztázza a képet egy \textit{kernel},  \textit{Maxpooling} esetében a kernel méreten belüli elemek közül a maximális nagyságút adja át az \textit{aktivációs térképnek}, \textit{Averagepoolingnál} pedig a kernelen belüli elemek átlagát adja át. 
+a képleteben $a$ létrejövő \textit{aktivációs térkép} szélessége, $k$ \textit{filter}t alkalmazva $a\times a\times k$ alakú \textit{aktivációs térképet} kapunk. Az \textit{aktivációs térképek} méretét csökkenteni kell az első kettő dimenziójában, $k$ a \textit{filterek} számával lesz egyenlő. Erre egy módszer az alulmintavételző rétegek\footnote{\textit{pooling} réteg}. A \textit{poolingoknak} sok fajtája van, legnépszerűbb a \textit{Maxpooling} és az \textit{AveragePooling}, alapja, hogy a \textit{filterek}hez hasonlóan végig pásztázza a képet egy \textit{kernel},  \textit{Maxpooling} esetében a kernel méreten belüli elemek közül a maximális nagyságút adja át az \textit{aktivációs térképnek}, \textit{Averagepoolingnál} pedig a kernelen belüli elemek átlagát adja át. 
 \newline\indent
 Ezekkel az építőkövekkel sokrétegű hálózatok hozhatóak létre, melyeknek nem szükséges az adatokat, képeket értelmes változóvá transzformálni, a hálózat meg tudja találni a prediktáláshoz szükséges információkat, az ilyen hálózatokat a mélységük miatt szokás \textit{deep learning} hálózatoknak nevezni. Ezekben a nagy hálózatokban a túlillesztés elkerülése és a tanulás gyorsítása érdekében szükséges regularizációkat is alkalmazni. Az egyik általam is használt regularizáció a \textit{Dropout}, melyet berakva teljesen összekötött retegek közé, az kikapcsolja az általunk megadott százaléknyi neuront az előző rétegből, így a következő réteg nem kapja meg az összes előző információt, nem engedi túlilleszteni a hálótt. Működési elvéhez hasonló a füvvényillesztésnél a túl magas fokszámú polinomok mellőzése, ha túl magas rendű polinomot illesztünk az adatponotkra, a hibánk minimális lehet, de nem biztos, hogy jól írja le az illesztett függvény a relációt, a \textit{Dropout} ezt a túl illesztést akadályozza meg a neurális hálóknál, azáltal, hogy egyszerűbb módon, kevesebb neuronnal próbál illeszteni. A \textit{Dropoutok} általában csak a tanulás során vannak bekapcsolva, prediktálásban az összes neuron részt vesz. Ezenkívűl egy hasznos normalizáció a \textit{Batchnormalization}, ami növeli a háló stabilitását azáltal, hogy az előző réteg aktivációjából kijővő értékekből levonja a \textit{batch} átlagát, majd leosztja a szórásával. A \textit{Batchnormalizationnel} nagyobb \textit{learning ratet} lehet alkalmazni, mert biztosítja, hogy egyik aktiváció se lesz túl magas, ezenkívűl az eltérő tanító és teszthalmaz eloszlás problémán is javít. Ez egy viszonlyag új találmány, így az ismertebb, jól működő hálók architektúrái még nem tartalmazzák.
 \section{Eddigi eredmények és módszerek áttekintése}
 %%% irodalmi áttekintés az image---> redshift és eredményeik.
 Ahhoz, hogy munkámat és eredményeit kontextusba tudjam helyezni, szükséges az eddigi eredményekről és módszerekről áttekintést nyújtanom. Előszőr az eredmények irodalomban használt kiértékelés módjait mutatom be.
 \newline\indent
-Vöröseltolódás-becslésnek a jóságát leggyakrabban a \textit{root mean squared errorral} (\textit{rmse}) szokták mérni, ami a prediktált értékek a valóstól vett átlagos eltérését mérik:
+Vöröseltolódás-becslésnek a jóságát leggyakrabban a reziduális
+négyzetösszegek átlagának a négyzetgyöke\footnote{ továbbiakban az angol megfelelőjét, a \textit{root mean squared errort} (\textit{rmse}) használom} szokták mérni:
 \begin{equation}
 \textit{rmse} = \sqrt{\frac{1}{N}\sum^{N}_{i=1} (p(x_i)-y_i)^2},
 \end{equation}
-a képletben $p(x_i)$ jelöli az $x_i$ mintából prediktált értéket, $y_i$ az $i$-edik  célváltozó, $N$ pedig a prediktált értékek száma. Az így kapott szám jól jellemzi a prediktálást, de az \textit{outlierek} okozhatnak torzítást. Az \textit{outlierek} arányának mérésére van a következő mód:
+a képletben $p(x_i)$ jelöli az $x_i$ mintából prediktált értéket, $y_i$ az $i$-edik  célváltozó, $N$ pedig a prediktált értékek száma. Az így kapott szám jól jellemzi a prediktálást, de a kiugró értékek\footnote{továbbiakban az angol megfelelőjét, az \textit{outliert} használom} okozhatnak torzítást. Az \textit{outlierek} arányának mérésére van a következő mód:
 \begin{equation}
 \frac{|p(x_i)-y_i|}{1 + y_i} > a,
 \end{equation}
  ahol $a$ legtöbbsször $0.15$. Az egyenlőtlenségben $a$-nál nagyobb értékeket adó $p(x_i)$-ket \textit{outliereknek} nyilvánítjuk, így lehet számolni, hogy a becslés milyen arányban tartalmaz a jótól jelentősen eltérő értékeket. Ezeken jellmezőkön kívűl az irodalomban a prediktálást abrázolni is szokták, mert ez lehetőséget ad a modell becslésének hibiáinak felfedésére. Ábrázolni a fotometriával becsült vöröseltolódás-értékeket ($z_{phot}$) lehet a spektroszkópiai vöröseltolódás-értékek függvényében ($z_{spec}$), tökéletes becslés esetén ez egy $45^{\circ}$-os egyenest adna. 
  \newline\indent
- A vöröseltolódás-becslést gépi tanulási módszerekkel való megvalósítása már régóta működő módszer, de ezek kinyert fotometriai adatokból tanultak és prediktáltak, nem pedig képekből. Az egyik első ilyen munka neurális hálókat használt \cite{ann1}, a tesztszettjükben a vöröseltolódás-értékek $0$ és $3.3$ között mozogtak és $\num{20000}$ galaxiséból állt. A háló magnitúdóadatokat használt bementeként, és  jóval kevesebb neuronból állt, mint a ma használlatos modellek. A szerzők próbálkoztak több háló becslésének összetársításával, így $\textit{rmse} = 0.113$ hibát értek el.
+ A vöröseltolódás-becslést gépi tanulási módszerekkel való megvalósítása már régóta működő módszer, de ezek kinyert fotometriai adatokból tanultak és prediktáltak, nem pedig képekből. Az egyik első ilyen munka neurális hálókat használt \cite{ann1}, a tesztszettjükben a vöröseltolódás-értékek $0$ és $3.3$ között mozogtak, és $\num{20000}$ galaxiséból állt, a $0.3$ feletti vöröseltolódás-értékek szimulációkból származtak\footnote{1.5 feletti vöröseltolódású galaxisokat jelenleg nem lehet jól észlelni, ezért megbízható vöröseltolódás-becslő módszereket sem lehet tesztelni rajtuk.}. A háló magnitúdóadatokat használt bementeként, és  jóval kevesebb neuronból állt, mint a ma használlatos modellek. A szerzők próbálkoztak több háló becslésének összetársításával, így $\textit{rmse} = 0.113$ hibát értek el.
  \newline\indent
  Szintén a magnitúdóadatok felhasználásval dolgozva, de más módszereket alkalmaztak a \cite{app_photoz} szerzői, másodrendű polinom illesztést, illetve \textit{nearest neighbour} módszert használtak az SDSS \textit{Early Data Releaséből} származó adatokra. A polinom illesztéssel $\textit{rmse} = 0.0318$, \textit{nearest neighbourral} $\textit{rmse} = 0.0365$-es eredményt értek el. Megjegyezendő, hogy a galaxisok vöröseltolódása $0$ és $0.6$ közöttiek voltak, ezért is lehetett jóval kisebb \textit{rmse}, mint a neurális hálóval.
  \newline \indent
- Egy fejlettebb neurális hálókat használó módszer \cite{mlrsone} $\textit{rmse} = 0.0230$ hibával tudott becsülni legjobb esetben, a bemeneti adatok nem csak magnítúdóadatok voltak, hanem az \textit{angular radiival}\footnote{közvetetten információt tartalmaz a galaxis szögméretéről} és \textit{concentraiton indexszel}\footnote{fényeség profiljának meredeksége} ki voltak egészítve. A szerzők kiemelik, hogy a ezzel a kiegészítéssel, jobb eredményt lehet elérni, viszont okosan kell megválasztani a tulajdonságokat. A tulajdonságok effektív kiválasztásával foglalkozik egy viszonylag új cikk \cite{fes}, de a számunkra érdekes és mostanában használt módszerek a becsléshez szükséges tulajdonságok kinyerését a neurális hálóra bízzák, és csak képeket használnak ehhez. 
+ Egy fejlettebb neurális hálókat használó módszer \cite{mlrsone} $\textit{rmse} = 0.0230$ hibával tudott becsülni legjobb esetben, a bemeneti adatok nem csak magnitúdóadatok voltak, hanem az \textit{angular radiival}\footnote{közvetetten információt tartalmaz a galaxis szögméretéről} és \textit{concentraiton indexszel}\footnote{fényeség profiljának meredeksége} ki voltak egészítve. A szerzők kiemelik, hogy a ezzel a kiegészítéssel, jobb eredményt lehet elérni, viszont okosan kell megválasztani a tulajdonságokat. A tulajdonságok effektív kiválasztásával foglalkozik egy viszonylag új cikk \cite{fes}, de a számunkra érdekes és mostanában használt módszerek a becsléshez szükséges tulajdonságok kinyerését a neurális hálóra bízzák, és csak képeket használnak ehhez. 
  \newline \indent
  Az egyik első képi adatokból becslő módszer \cite{benh} az \textit{g,r,i} és \textit{z} szűrőkön keresztül készített képeket használta, a csatornákat \textit{g-r, r-i, i-z }és \textit{r} módon alakította ki. A kivágott képek $72\times 72\times 4$-szeresek voltak, melyekből véletlenszerűen kivágott egy $60\times 60 \times 4$ méretűt, és ezt kapta meg a mély konvolúciós háló. A szerző kitér arra is, hogy $32\times32\times 4$ méretű képek használatával a becslés teljesítménye $30\%$-ot romlik. Az adathalmaz vöröseltolódás-eloszlása viszonylag egyenletes volt, $0$ és $1$ közötti értékekkel, $\num{64647}$ objektumból állt és az SDSS \textit{DR10}-ből származtak, ezt osztotta fel tanító, teszt és validációs részekre. A modell osztályozó volt, vékony vöröseltolódás-intervallumok alkották az osztályokat. Ezzel a módszerrel  $\textit{rmse} = 0.030$ pontosságot ért el, ami jó eredménynek számít figyelembe véve az adathalmaz vöröseltolódás-értékeit.
  \newline\indent
@@ -294,7 +326,7 @@ a képletben $p(x_i)$ jelöli az $x_i$ mintából prediktált értéket, $y_i$ a
 Feltételként szabtam meg, hogy a galaxisok vöröseltolódás $0.05$-nél nagyobb legyen, hogy a nagy fényességük miatt a képeken szaturációt okozó csillagok ne keveredjenek bele, valamint $1$-nél kisebb legyen a vöröseltolódás, hogy az SDSS adatbázisában tévesen galaxisnak osztályozott kvazárok se kerüljenek bele. A képméret kiválasztásánál figyelembe kellett venni, hogy a túl nagy kép túl sok haszontalan információt is tartalmazhat, valamint a közeli szomszédos objektumok is félrevezethetik a neurális hálót, de a túlságosan kicsi képméret miatt lehet lemarad fontos információ. Ezért vizualizálva a galaxisokat különböző képmérettel, az optimális választásnak az $50\times 50$ pixeles méret tűnt.
 \newline\indent
  A \textit{SciServer}-en az egyes \textit{field}ek olyan könyvtárstruktúrába vannak rendezve, hogy a \textit{run, rerun, camcol, fieldID} és színszűrő alapján kereshetőek. 
- Ezért az SQL lekérdezésnél a magnitúdó, vöröseltolódás és objektum azonosító addatai mellett lekérdeztem \textit{field} könyvtárban megtalálásához szükséges adatokat, valamint az egyes színszűrőkkel készített képen hol van a galaxis közepe\footnote{sor és oszlop pixelben, a különböző színszűrőkön készített képeken  máshol volt az objektum közepe a SDSS képalkotása miatt.}. A galaxis közepének lehelyezkedésére az volt a kikötés, hogy ne a kép szélének $25$ pixeles szomszédságában helyezkedjen el, így a kivágásnál nem fog gondot okozni a hiányzó információ. Az így kapott táblákkal előtudtam hívni a FITS formátumú \textit{field}eket, melyekből ki tudtam vágni a galaxis $50\times 50$ méretű képét, levontam a \textit{Softbias}-t\footnote{a \textit{fieldek}hez hozzáadtak egy 1000-es nagyságrendű számot a kép készülése után, hogy ne legyen negatív pixelérték sehol.}, és az eredeti könyvtárstruktúrához hasonló módon elmentettem a képet, egy \textit{python dictionarybe} pedig az elérési útvonalat és az objektum azonosítóját, így azonosító alapján előhívható volt a kivágott kép. Ezt mindegyik szűrővel készült képre külön megcsináltam, majd az összes képet egy nagy tömbbe tettem a könnyebb mozgatás és elérés érdekében. A tömb dimenziója $\text{objektumok száma}\times \num{12500}$ lett, a különböző színű, azonos objektumról készült képeket egymás után tettem, így az adatokat tartalmazó tábla sorának sorszámával lehetett megtalálni a képeket. Ez a tárolási mód okozhatna olyan hibát, hogy elcsúsznak, és nem a megfelelő indexnál lesznek a képek, de ezt véletlen mintavételezéssel megjelenítve a képet és az azonosítót, össze tudtam hasonlítani az SDSS képeivel. A képi adattömb az 1-es adathalmazhoz 14 GB méretű lett,  aminek a betöltéséhez nagy memóriájú gép kellett, a betöltött tömb formája már könnyen alakítható volt a feladat igényeihez. %Megjegyezendő, hogy a tanítóhalmaz elkészítése gyorsítható, ha a megnyitott \textit{field}eket nem zárjuk be miután egy objektumot kivágtunk, hanem a táblában még szereplő azonos \textit{field}ű galaxisokat is kivágjuk, és csa utána csukjuk be.
+ Ezért az SQL lekérdezésnél a magnitúdó, vöröseltolódás és objektum azonosító addatai mellett lekérdeztem \textit{field} könyvtárban megtalálásához szükséges adatokat, valamint az egyes színszűrőkkel készített képen hol van a galaxis közepe\footnote{sor és oszlop pixelben, a különböző színszűrőkön készített képeken  máshol volt az objektum közepe a SDSS képalkotása miatt.}. A galaxis közepének lehelyezkedésére az volt a kikötés, hogy ne a kép szélének $25$ pixeles szomszédságában helyezkedjen el, így a kivágásnál nem fog gondot okozni a hiányzó információ.Az 1-es adathalmazhoz tartozó táblához a lekérdezést mellékeltem a \ref{query} függelékben. Az így kapott táblákkal előtudtam hívni a FITS formátumú \textit{field}eket, melyekből ki tudtam vágni a galaxis $50\times 50$ méretű képét, levontam a \textit{Softbias}-t\footnote{a \textit{fieldek}hez hozzáadtak egy 1000-es nagyságrendű számot a kép készülése után, hogy ne legyen negatív pixelérték sehol.}, és az eredeti könyvtárstruktúrához hasonló módon elmentettem a képet, egy \textit{python dictionarybe} pedig az elérési útvonalat és az objektum azonosítóját, így azonosító alapján előhívható volt a kivágott kép. Az eljáráshoz tartozó kódot mellékelem a \ref{code} függelékben. Ezt mindegyik szűrővel készült képre külön megcsináltam, majd az összes képet egy nagy tömbbe tettem a könnyebb mozgatás és elérés érdekében. A tömb dimenziója $\text{objektumok száma}\times \num{12500}$ lett, a különböző színű, azonos objektumról készült képeket egymás után tettem, így az adatokat tartalmazó tábla sorának sorszámával lehetett megtalálni a képeket. Ez a tárolási mód okozhatna olyan hibát, hogy elcsúsznak, és nem a megfelelő indexnál lesznek a képek, de ezt véletlen mintavételezéssel megjelenítve a képet és az azonosítót, össze tudtam hasonlítani az SDSS képeivel (lásd \ref{ims} függelék). A képi adattömb az 1-es adathalmazhoz 14 GB méretű lett,  aminek a betöltéséhez nagy memóriájú gép kellett, a betöltött tömb formája már könnyen alakítható volt a feladat igényeihez. %Megjegyezendő, hogy a tanítóhalmaz elkészítése gyorsítható, ha a megnyitott \textit{field}eket nem zárjuk be miután egy objektumot kivágtunk, hanem a táblában még szereplő azonos \textit{field}ű galaxisokat is kivágjuk, és csa utána csukjuk be.
  
  
  \section{Adatexploráció}
@@ -303,14 +335,15 @@ Feltételként szabtam meg, hogy a galaxisok vöröseltolódás $0.05$-nél nagy
  Az SDSS \textit{DR7}-ben a galaxisok vöröseltolódásának mediánja $z\sim0.07$ \cite{rsd}, a teszthalmazomé $z\sim0.11$, ami a 0.05-ös vöröseltolódásbeli vágásomnak tudható be.  
  \begin{figure}[h!]
  \centering
-  \begin{subfigure}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth, height = \textwidth]{Figures/hists.pdf}
+  \hspace{-1.5cm}
+  \begin{subfigure}[b]{0.40\textwidth}
+    \includegraphics[width=\textwidth, height = \textwidth]{Figures/histsgoot.pdf}
     %\caption{Picture 1}
     \label{fig:1}
   \end{subfigure}
-  \hspace{2cm}
-  \begin{subfigure}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth, height = 1.05\textwidth]{Figures/rsd.png}
+  \hspace{0cm}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[height=\textwidth ]{Figures/rsd2.png}
     \label{fig:2}
   \end{subfigure}
   \caption{Az általam előállított tanulóhalmaz és az SDSS \textit{DR7} vöröseltolódás-eloszlása. A jobboldali kép forrása: \cite{rsd}}
@@ -434,7 +467,7 @@ A haló bementként megkapta az ötcsatornás képet egybe, valamint az öt kép
 \label{cnnm}
 \end{figure}
 \newline\indent
- Az 1-es teszthalmazon $\num{50000}$ képen tesztelve a $\textit{rmse} = 0.0345$ lett, ami egy kicsit gyengébb, mint a $random forest$ becslése. A \ref{cnnm} ábrát összhasonlítva a \textit{random forest} prediktálásával a \ref{rfp} ábrán, látható, hogy a neurális háló tud  $\approx 0.4$ feletti vöröseltolódás-értékeket prediktálni, viszont több \textit{outlier} adatpont van a nagyobb spektrális vöröseltolódások alulbecslése miatt. Alacsony vöröseltolódásokon ez a modell is szisztematikusan felülbecsül. A lényegesen más vöröseltolódás-eloszlású 2-es adathalmazon $\num{20425}$ galaxison tesztelve a $\textit{rmse} = 0.0505$, viszont átfedés volt a tanuló-és tesztszett között, így az átfedő galaxisok hibájánaka becslését nullának véve a $rmse =  0.056$, ami nem túl jó eredmény. A hiba nagysága fakadhat abból, hogy a magnitúdóbecslő hálók is más magnitúdóeloszláson tanultak, így a becslésük pontatlanabb. Megnézve a \ref{cnn2m} ábrát, látható, hogy a vöröseltolódás-eloszlásokban található két csúcs körül enyhén felülbecsül, közötte viszont jól eltalálja az értékeket.
+ Az 1-es teszthalmazon $\num{50000}$ képen tesztelve a $\textit{rmse} = 0.0345$ lett, ami egy kicsit gyengébb, mint a $random forest$ becslése. A \ref{cnnm} ábrát összhasonlítva a \textit{random forest} prediktálásával a \ref{rfp} ábrán, látható, hogy a neurális háló tud  $\approx 0.4$ feletti vöröseltolódás-értékeket prediktálni, viszont több \textit{outlier} adatpont van a nagyobb spektrális vöröseltolódások alulbecslése miatt. Alacsony vöröseltolódásokon ez a modell is szisztematikusan felülbecsül. A lényegesen más vöröseltolódás-eloszlású 2-es adathalmazon $\num{20425}$ galaxison tesztelve a $\textit{rmse} = 0.0505$, viszont átfedés volt a tanuló-és tesztszett között, így az átfedő galaxisok hibájának a becslését nullának véve a $rmse =  0.056$, ami nem túl jó eredmény. A hiba nagysága fakadhat abból, hogy a magnitúdóbecslő hálók is más magnitúdóeloszláson tanultak, így a becslésük pontatlanabb. Megnézve a \ref{cnn2m} ábrát, látható, hogy a vöröseltolódás-eloszlásokban található két csúcs körül enyhén felülbecsül, közötte viszont jól eltalálja az értékeket.
  \begin{figure}[]
  \centering
   \begin{subfigure}[b]{0.3\textwidth}
@@ -453,7 +486,14 @@ A haló bementként megkapta az ötcsatornás képet egybe, valamint az öt kép
  
  \section{Egy mély konvolúciós háló}
  A \textit{random foresttel} láthatóan működött a kinyert adatokból a vöröseltolódás-becslés, de kézenfekvőbb olyan módszert megvalósítani, ami kitalálja, hogy mi a fontos tulajdonság a prediktálás szempontjából, és ezt ki is vonja automatikusan a képből.  
- \newline\indent
+  \begin{figure}[h!]
+\centering
+\includegraphics[width = 1\textwidth, height = 0.5\textwidth]{Figures/cnnf2.pdf}
+\label{arch}
+\caption{A mély konvolúciós hálóban az egyes rétegek alakulása, a háló szerkezete.}
+\end{figure}
+
+ %\newline\indent
  A képi adatokból jól prediktáló konvolúciós hálók\footnote{például VGG16, GoogLeNet} architektúrájához hasonló modellt célszerű készíteni kiindulásként, de ezeket mind osztályozó, objektumfelismerő problémák megoldására használták, tanítására több adat és számítási kapacitás állt rendelkezésre, ezért a vöröseltolódás-becslő háló nem lesz olyan \textit{mély}. A háló tanítását a 2-es adathalmaz első $\num{80000}$ képével végeztem, majd a maradék $\num{20425}$ képpel teszteltem. Valamint végeztem tesztelést az összehasonlítás édekében az 1-es adathalmaz $\num{100000}$-től $1500000$-ig elhelyezekdő képeivel is.\newline\indent A modell architektúrája a következő volt: a bemenet az $50\times50\times5$ méretű kép volt, utána kétszer egymás után, 48 darab $3\times 3$-as \textit{filterekből} álló konvolúciós réteg, majd $2\times 2$ \textit{Averagepooling}. Utána következett 3 egymás utáni $96$ $3\times3$ \textit{filterből} álló réteg, majd megint egy $2\times2$-es \textit{Averagepooling}, majd kétszer $200$ darab $3\times3$ \textit{filter}, $2\times 2$ \textit{Averagepooling}, egy $200$ \textit{filter}es, $3\times 3$ konvolúciós réteg, egy \textit{BatchNormalizáció}, majd megint egy $200$ darab, $3\times 3$-as \textit{filter}es réteg. Aztán $2\times 2$-es \textit{Averagepooling}, majd egy $200$ és egy $20$ darabos $3\times 3$ \textit{filter}es réteg, utána $72$ darab $1\times 1$ \textit{filteres} dimenzió csökkentő konvolúciós réteg.
 \begin{figure}[h!]
  \centering
@@ -473,7 +513,7 @@ Mindegyik rétegen \textit{ReLU} aktivációt alkalmaztam. A teljesen összeköt
  \newline \indent
 A tanításhoz a megnövekedett paraméterszám miatt több \textit{epochra} volt szükség, mint a magnitúdóbecslésnél, összesen $100$ \textit{epoch}-ra, a \textit{learning rate}-et  csökkentettem, ha nem csökkent a hiba értéke, illetve a \textit{batch size}-t növeltem. A 2-es adathalmazon a $\num{20425}$ galaxison tesztelve a $\textit{rmse} = 0.0447$ lett. A \ref{cnn} ábra bal oldalán látható, hogy a prediktált értékeket jelölő pontok szimmetrikusak a $45^{\circ}$-os egyenesre a $0.2$ és $0.45$ közötti vöröseltolódás-tartományon, nincsen szisztematikus hibája. A $0.2$-nél kisebb vöröseltolódásokat gyengén felülbecsli, a $0.45$-nél nagyobb vöröseltolódásúakat pedig alul. Érdemes volt megnézni, hogyan teljesít a háló az 1-es adathalmazon, ahol több alacsony vöröseltolódású galaxist tartalmaz a tesztszett, valamint így összehasonlítható a \textit{random forest} módszerrel. Mielőtt prediktáltattam volna a modellt, tanítottam $10$ \textit{epoch}-ot az 1-es adathalmazon.
 
-\begin{figure}[]
+\begin{figure}[h!]
  \centering
   \begin{subfigure}[b]{0.3\textwidth}
     \includegraphics[width=\textwidth, height = \textwidth]{Figures/plotCNN1.png}
@@ -492,7 +532,7 @@ A tesztadatokon $\textit{rmse} =0.0295$ hibát produkált, ami jobb mint a \text
 \section{Teljesen összekötött neurális háló}
 
 Érdemes megvizsgálni, hogy a képek redukciójával mennyi használható információ marad a vöröseltolódáscbecsléshez, hogy csupán a galaxisok kiterjedése és fényessége, illetve fényességének az objektum közepéhez viszonyított csökkenése mennyi információt tartalmaz. Ehhez az egyes színszűrők által készített képek két irányból vett, közepén átmenő metszetét használtam, így az $50\times50\times 5$ méretű képből egy $500\times 1$-es vektor lett.
-\begin{figure}[]
+\begin{figure}[h!]
 \centering
 \includegraphics[width = 0.8\textwidth, height = 0.4\textwidth]{Figures/plotIMS.pdf}
 \label{imvec}
@@ -515,9 +555,12 @@ A bemenet formája miatt teljesen összekötött hálót készítettem, aminek a
 \label{dnn1}
 \end{figure}
 A tanításhoz $\approx 200$ \textit{epoch} volt szükséges, de az adatok relatíve kis mérete és az előző modellekhez képest alacsonyabb szabad paraméterszám miatt ez nem volt sok idő. Az 1-es adathalmaz első $\num{100000}$ képén végeztem a tanitást, és az utolsó $\num{50000}$ képen a tesztelést. A \ref{dnn1}ábrán látható, hogy becslései viszonylag szimmetrikusak a $45^{\circ}$-os egyenesre, de nem pontosabb mint a konvolúciós háló. A $\textit{rmse} = 0.0355$ lett, ami nem rossz eredmény a képek redukciójának mértékének fényében. Az \textit{outlier rate} $0.15$-nél $0.174\%$, $0.05$-nél $7.112\%$ volt.
-
+\newpage
 \section{Eredmények összegzése}
-Az módszerek kényelmesebb összehasonlítása érdekében a lenti táblázatban összegzem az egyes eredményeket. \begin{table}[h!]
+Az módszerek kényelmesebb összehasonlítása érdekében a lenti táblázatban összegzem az egyes eredményeket. A táblázati adatokból és az ábrákon is látható, hogy a mély konvolúciós háló teljesített a legjobban, mind a kettő adathalmazt figyelembe véve is.
+
+
+\begin{table}[h!]
 \centering
 \begin{tabular}{ |M{3cm}|M{3cm}|M{4cm}|M{4cm}|}\hline
 módszer& \textit{rmse}&$\frac{|z_{photo}-z_{spec}|}{1+z_{spec}}>0.15$&$\frac{|z_{photo}-z_{spec}|}{1+z_{spec}}>0.05 $\\ \hline
@@ -532,8 +575,6 @@ Mély konvolúciós háló & $0.0447$ & $0.484\%$& $7.529\%$\\ \hline
 \end{tabular}
 \caption{Az eredmények összefoglalása.}
 \end{table}
-A táblázati adatokból és az ábrákon is látható, hogy a mély konvolúciós háló teljesített a legjobban, mind a kettő adathalmazt figyelembe véve is.
-
 
 \chapter{Összefoglalás}
 Szakdolgozatomban bemutattam a gépi tanulási módszerek alkalmazásait vöröseltolódás-becslésre. Ismertettem a \textit{random forest} algoritmus és a neurális hálók működését és használhatóságát, áttekintettem a fotometrikus vöröseltolódás-becslő módszereket, valamint előállítottam két nagyobb tanítóhalmazt is, amiket a további munkára illetve más feladatokra is fel lehet használni. 
@@ -541,20 +582,121 @@ Szakdolgozatomban bemutattam a gépi tanulási módszerek alkalmazásait vörös
 Elkészítettem és prezentáltam négy módszert, melyekkel lehetőség van vöröseltolódást becsülni a galaxisok képéből. Az általam megvalósított módszerek közül a mély konvolúciós háló prediktálásainak a \textit{root mean squared errorja} megközelítette a \textit{DR 7}-en alkalmazott módszerek hibáját. Megjegyezendő, hogy a neurális hálók architektúrájának megalkotása heurisztikus folyamat volt, ami nem garantálta a legjobb megoldást, csak egyet a jók közül, ezért az architektúrák finom hangolásával illetve merészebb regularizációs és normalizációs rétegek használatával lehet még növelni a pontosságot. 
 
 Az, hogy a gépi tanuló eljárások jól tudnak teljesíteni tudományos célú, komplexebb problémákon, ezek fejlődése és a növekvő mennyiségű elérhető mérési adat előrevetítik, hogy a jövőben még nagyobb szerep jut nekik a tudományban.
+%\newpage
+\appendix
+
+\chapter*{Függelék}
+\addappheadtotoc
+\renewcommand\thesection{A.\arabic{section}}
+\section{Margaret Gellerék égtérképe}
+\label{MGM}
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 0.8\textwidth]{Figures/MG.png}
+\label{imec}
+\caption{Az ábrán látható, hogy a sűrűség eloszlás nem egyeneletes, megfigyelhetőek üregek és egy \textit{nagy fal}. A kép forrása \cite{mgim}}
+\end{figure}
+
+\renewcommand\thesection{B.\arabic{section}}
+\section{Az adattáblához használt lekérdezés}
+\label{query}
+Az 1-es adathalmaz adattáblájához használt lekérdezés. Ennek az eredménye $\approx \num{580000}$ objektumot adott, ebbl az első $\num{150000}$-et használtam fel.
+\begin{verbatim}
+SELECT TOP 1E6
+    p.objId, p.run, p.rerun,p.camcol, p.field, p.rowc_r,
+     p.colc_r,p.rowc_u, p.colc_u,p.rowc_g, p.colc_g,p.rowc_i, 
+     p.colc_i, p.rowc_z, p.colc_z,
+     p.u, p.g, p.r, p.i, p.z,
+     s.z as redshift, s.zErr
+    FROM PhotoObjAll AS p
+     JOIN SpecObj AS s ON s.bestobjid = p.objid
+    WHERE
+       p.u BETWEEN  15  AND 22
+       AND p.g BETWEEN  15  AND 22
+       AND p.r  BETWEEN  15  AND 22
+       AND p.i BETWEEN  15  AND 22
+       AND p.z  BETWEEN  15  AND 22
+       AND (s.objTypeName = 'Galaxy' )
+       AND s.z between 0.05 AND 1
+     
+      AND p.colc_u BETWEEN 25 and 2023
+      AND p.colc_g BETWEEN 25 and 2023
+      AND p.colc_r BETWEEN 25 and 2023
+      AND p.colc_i BETWEEN 25 and 2023
+      AND p.colc_z BETWEEN 25 and 2023
+      AND p.rowc_u BETWEEN 25 and 1463
+      AND p.rowc_g BETWEEN 25 and 1463
+      AND p.rowc_r BETWEEN 25 and 1463
+      AND p.rowc_i BETWEEN 25 and 1463
+      AND p.rowc_z BETWEEN 25 and 1463
+\end{verbatim}
+\section{A képek megtalálása, kivágása és elmentése}
+\label{code}
+Kellett egy függvény ami előállítja az elérési útvonalát a képnek az adatokból.
+\begin{lstlisting}
+def filePath(run,camcol, field, rerun, color):
+    if run>=1000 and field >=100:
+        image_file = '/home/idies/workspace/sdss_das/das2/imaging/%i'%run +'/'+str(rerun)+'/corr/'+str(camcol)+'/fpC-00%i'%run+'-'+color+
+        		str(camcol)+'-0'+str(field)+'.fit.gz'
+    if run >=1000 and field < 100:
+        image_file = '/home/idies/workspace/sdss_das/das2/imaging/%i'%run +'/'+str(rerun)+'/corr/'+str(camcol)+'/fpC-00%i'%run+'-'+
+        		color+str(camcol)+'-00'+str(field)+'.fit.gz'
+    if run <1000 and field < 100:
+        image_file = '/home/idies/workspace/sdss_das/das2/imaging/%i'%run +'/'+str(rerun)+'/corr/'+str(camcol)+'/fpC-000%i'%run+'-'+color+
+        		str(camcol)+'-00'+str(field)+'.fit.gz'
+    if run <1000 and field >= 100:
+        image_file = '/home/idies/workspace/sdss_das/das2/imaging/%i'%run +'/'+str(rerun)+'/corr/'+str(camcol)+'/fpC-000%i'%run+'-'+color+
+        	str(camcol)+'-0'+str(field)+'.fit.gz'
+    return image_file
+\end{lstlisting}
+Ez a függvény kivágja az általunk megadott méretű részt az általunk megadott koordináták körül.
+\begin{lstlisting}
+def cutOut(rowc, colc,image_data, outputSize):
+    halfWidth = int(outputSize/2)
+    cutout = image_data[rowc-halfWidth:rowc+halfWidth, colc-halfWidth:colc+halfWidth].copy()
+    return cutout
+\end{lstlisting}
+Az előző két függvény felhasználsával előallítja a képet, elmenti, és az elérési útvonalát egy \textit{python dictionarybe} menti.
+\begin{lstlisting}
+from astropy.io import fits
+
+for i in range(0, len(data)):
+    image_file = filePath(data.run[i], data.camcol[i], data.field[i], data.rerun[i], 'u')
+
+    hdu_list = fits.open(image_file)
+    image_data = fits.getdata(image_file)
+    image_data -= hdu_list[0].header['Softbias']# ez a softbias
+    filename = '../scratch/'+str(data.run[i]) + '/'+str(data.rerun[i]) + '/'+ str(data.camcol[i]) +'/' + 'u'+str(data.objId[i])#+'.fits'
+    a = cutOut(data.rowc_u[i], data.colc_u[i], image_data, 50)
+    pathDictU50.update({str(data.objId[i]):filename})
+    zDictU50.update({str(data.objId[i]):data.z[i]})
+    hdu_list.close()
+    
+    saveToDir(filename,a)
+    
+save_obj(pathDictU50, 'pathU50m')
+\end{lstlisting}
+
+\section{A képek ellenőrzése}
+\label{ims}
+A tanulóhalmazunk helyes indexelését úgy vizsgálhatjuk, hogy véletlenszerűen megjelenítünk galaxisokat, kiíratjuk az elméletileg hozzátartozó objektum azonosítót, az objektum azonosító alapján megkeressük az SDSS \textit{DR7 explore} felületén\cite{explore} a galaxis képét, így szemrevételezéssel összehasonlíthatóak. 
+\begin{figure}[h!]
+ \centering
+  \begin{subfigure}[b]{\textwidth}
+    \includegraphics[width=\textwidth]{Figures/FILTERS.png}
+    \label{fig:1}
+  \end{subfigure}
+  \hspace{1.7cm}
+  \begin{subfigure}[b]{0.2\textwidth}
+    \includegraphics[width=\textwidth]{Figures/imgal.jpeg}
+    \label{fig:2}
+  \end{subfigure}
+  \caption{Felül az 5 színszűrőn keresztül készített kép szürkeárnyalatosan, alul az ugyanehhez az objektumhoz tartozó, \cite{explore} található színessé transzformált .jpeg kép.}
+\label{cnn1}
+\end{figure}
+
+
 \newpage
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{thebibliography}{99\kern\bibindent}
 \def\bibindent{1em}
 
@@ -565,6 +707,10 @@ Az, hogy a gépi tanuló eljárások jól tudnak teljesíteni tudományos célú
 \def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
 \makeatother
 \addcontentsline{toc}{chapter}{Irodalomjegyzék}
+\bibitem{mg}M.J, Geller, et al. “A Slice of the Universe.” SAO/NASA ADS: ADS Home Page, 1 Mar. 1986, adsabs.harvard.edu/doi/10.1086/184625.
+
+\bibitem{beks}Szalay, A. S., et al. “Redshift Survey with Multiple Pencil Beams at the Galactic Poles.” Proceedings of the National Academy of Sciences, vol. 90, no. 11, 1993, pp. 4853–4858., doi:10.1073/pnas.90.11.4853.
+
 \bibitem{fr}Z. Frei and A. Patkós, Inflációs Kozmológia: (Typotex, Budapest, 2005).
 
 
@@ -601,6 +747,7 @@ Az, hogy a gépi tanuló eljárások jól tudnak teljesíteni tudományos célú
 
 \bibitem{rf2}“Random Forests Leo Breiman and Adele Cutler.” Statistics at UC Berkeley, www.stat.berkeley.edu/~breiman/RandomForests/.
 
+\bibitem{rfp}\url{www.globalsoftwaresupport.com/wp-content/uploads/2018/02/ggff5544hh.png.}
 
 \bibitem{mlrsthree}Sadeh, I., et al. “ANNz2: Photometric Redshift and Probability Distribution Function Estimation Using Machine Learning.” Publications of the Astronomical Society of the Pacific, vol. 128, no. 968, 2016, p. 104502., doi:10.1088/1538-3873/128/968/104502.
 
@@ -619,11 +766,15 @@ Az, hogy a gépi tanuló eljárások jól tudnak teljesíteni tudományos célú
 \bibitem{sdssV}Zasowski, Gail. Science Blog from the SDSS, blog.sdss.org/2018/02/21/sdss-v-is-underway/.
 
 %%%% 3 %%%% Trainset
-\bibitem{sci}“SciServer – Collaborative Data-Driven Science.” SciServer, www.sciserver.org/.
+\bibitem{sci}“SciServer – Collaborative Data-Driven Science.” SciServer, \\\url{www.sciserver.org/.}
 
 \bibitem{rsd}Verevkin, A. O., et al. “The Non-Uniform Distribution of Galaxies from Data of the SDSS DR7 Survey.” Astronomy Reports, vol. 55, no. 4, 2011, pp. 324–340., doi:10.1134/s1063772911020089.
 
 \bibitem{covs}Mcgaughey, Georgia, et al. “Understanding Covariate Shift in Model Performance.” F1000Research, vol. 5, 2016, p. 597., doi:10.12688/f1000research.8317.3.
+
+\bibitem{mgim}Huchra, John P. “THE CfA REDSHIFT SURVEY.” \\\url{www.cfa.harvard.edu/~dfabricant/huchra/zcat/.}
+
+\bibitem{explore}\url{http://skyserver.sdss.org/dr7/en/tools/explore/obj.asp}
 
 \end{thebibliography}
 
