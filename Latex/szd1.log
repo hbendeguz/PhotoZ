@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 MAY 2018 00:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 MAY 2018 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1265,37 +1265,37 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 
 ] [5] [6]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 214.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 214.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 215.
  <Figures/rf2.png, id=39, 880.79062pt x 499.8675pt>
 File: Figures/rf2.png Graphic file (type png)
 
 <use Figures/rf2.png>
-Package pdftex.def Info: Figures/rf2.png used on input line 218.
+Package pdftex.def Info: Figures/rf2.png used on input line 219.
 (pdftex.def)             Requested size: 350.93915pt x 199.16928pt.
  [7 <./Figures/rf2.png>] [8]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 237.
+d on input line 238.
 
 <Figures/fig1.pdf, id=49, 322.22884pt x 164.68527pt>
 File: Figures/fig1.pdf Graphic file (type pdf)
  <use Figures/fig1.pdf>
-Package pdftex.def Info: Figures/fig1.pdf used on input line 246.
+Package pdftex.def Info: Figures/fig1.pdf used on input line 247.
 (pdftex.def)             Requested size: 222.69212pt x 113.81102pt.
 
-Overfull \hbox (89.61723pt too wide) in paragraph at lines 246--247
+Overfull \hbox (89.61723pt too wide) in paragraph at lines 247--248
 [][] 
  []
 
 <figures/fig2.pdf, id=50, 309.76228pt x 136.78102pt>
 File: figures/fig2.pdf Graphic file (type pdf)
  <use figures/fig2.pdf>
-Package pdftex.def Info: figures/fig2.pdf used on input line 249.
+Package pdftex.def Info: figures/fig2.pdf used on input line 250.
 (pdftex.def)             Requested size: 225.53375pt x 99.58464pt.
 
-Overfull \hbox (92.45886pt too wide) in paragraph at lines 249--250
+Overfull \hbox (92.45886pt too wide) in paragraph at lines 250--251
 [][] 
  []
 
@@ -1303,61 +1303,57 @@ Overfull \hbox (92.45886pt too wide) in paragraph at lines 249--250
 3. fejezet.
 [15
 
-] [16] [17] <Figures/histsgoot.pdf, id=113, 487.74408pt x 442.04022pt>
+] [16] [17] <Figures/histsgoot.pdf, id=117, 487.74408pt x 442.04022pt>
 File: Figures/histsgoot.pdf Graphic file (type pdf)
 
 <use Figures/histsgoot.pdf>
-Package pdftex.def Info: Figures/histsgoot.pdf used on input line 341.
+Package pdftex.def Info: Figures/histsgoot.pdf used on input line 340.
 (pdftex.def)             Requested size: 177.426pt x 177.42674pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
+Underfull \hbox (badness 10000) in paragraph at lines 340--343
 [][]
  []
 
-<Figures/rsd2.png, id=114, 625.33624pt x 423.5825pt>
+<Figures/rsd2.png, id=118, 625.33624pt x 423.5825pt>
 File: Figures/rsd2.png Graphic file (type png)
  <use Figures/rsd2.png>
-Package pdftex.def Info: Figures/rsd2.png used on input line 347.
+Package pdftex.def Info: Figures/rsd2.png used on input line 346.
 (pdftex.def)             Requested size: 261.93333pt x 177.42868pt.
 
-Overfull \hbox (84.50465pt too wide) in paragraph at lines 347--349
+Overfull \hbox (84.50465pt too wide) in paragraph at lines 346--348
 [][]
  []
 
 [18 <./Figures/histsgoot.pdf> <./Figures/rsd2.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 355.
-
-<Figures/corrmap.pdf, id=154, 516.256pt x 416.27208pt>
+<Figures/corrmap.pdf, id=158, 516.256pt x 416.27208pt>
 File: Figures/corrmap.pdf Graphic file (type pdf)
 
 <use Figures/corrmap.pdf>
-Package pdftex.def Info: Figures/corrmap.pdf used on input line 358.
+Package pdftex.def Info: Figures/corrmap.pdf used on input line 361.
 (pdftex.def)             Requested size: 141.94325pt x 141.94984pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 [][]
  []
 
-<Figures/relf.pdf, id=155, 365.34619pt x 288.44888pt>
+<Figures/relf.pdf, id=159, 365.34619pt x 288.44888pt>
 File: Figures/relf.pdf Graphic file (type pdf)
  <use Figures/relf.pdf>
-Package pdftex.def Info: Figures/relf.pdf used on input line 364.
+Package pdftex.def Info: Figures/relf.pdf used on input line 367.
 (pdftex.def)             Requested size: 141.94368pt x 141.95297pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--366
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 [][]
  []
 
-<Figures/plotbaselineRF.png, id=156, 5260.65375pt x 5163.29pt>
+<Figures/plotbaselineRF.png, id=160, 5260.65375pt x 5163.29pt>
 File: Figures/plotbaselineRF.png Graphic file (type png)
 
 <use Figures/plotbaselineRF.png>
-Package pdftex.def Info: Figures/plotbaselineRF.png used on input line 369.
+Package pdftex.def Info: Figures/plotbaselineRF.png used on input line 372.
 (pdftex.def)             Requested size: 141.91914pt x 134.80174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--371
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 [][]
  []
 
@@ -1369,76 +1365,76 @@ lusion: multiple pdfs with page group included in a single page
 4. fejezet.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 390.
+               Default added (so using `tbp') on input line 393.
 
-<Figures/pmu3.png, id=227, 2823.54875pt x 2772.3575pt>
+<Figures/pmu3.png, id=231, 2823.54875pt x 2772.3575pt>
 File: Figures/pmu3.png Graphic file (type png)
  <use Figures/pmu3.png>
-Package pdftex.def Info: Figures/pmu3.png used on input line 392.
+Package pdftex.def Info: Figures/pmu3.png used on input line 395.
 (pdftex.def)             Requested size: 133.04286pt x 133.04204pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--395
+Underfull \hbox (badness 10000) in paragraph at lines 395--398
 [][]
  []
 
-<Figures/pmg3.png, id=228, 2903.84875pt x 2779.38374pt>
+<Figures/pmg3.png, id=232, 2903.84875pt x 2779.38374pt>
 File: Figures/pmg3.png Graphic file (type png)
  <use Figures/pmg3.png>
-Package pdftex.def Info: Figures/pmg3.png used on input line 398.
+Package pdftex.def Info: Figures/pmg3.png used on input line 401.
 (pdftex.def)             Requested size: 133.06024pt x 133.03993pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--400
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 [][]
  []
 
-<Figures/pmr3.png, id=229, 2886.785pt x 2763.32375pt>
+<Figures/pmr3.png, id=233, 2886.785pt x 2763.32375pt>
 File: Figures/pmr3.png Graphic file (type png)
  <use Figures/pmr3.png>
-Package pdftex.def Info: Figures/pmr3.png used on input line 403.
+Package pdftex.def Info: Figures/pmr3.png used on input line 406.
 (pdftex.def)             Requested size: 133.07123pt x 133.07233pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--406
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
 [][]
  []
 
-<Figures/pmi3.png, id=230, 2839.60875pt x 2779.38374pt>
+<Figures/pmi3.png, id=234, 2839.60875pt x 2779.38374pt>
 File: Figures/pmi3.png Graphic file (type png)
  <use Figures/pmi3.png>
-Package pdftex.def Info: Figures/pmi3.png used on input line 409.
+Package pdftex.def Info: Figures/pmi3.png used on input line 412.
 (pdftex.def)             Requested size: 133.063pt x 133.03993pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--412
+Underfull \hbox (badness 10000) in paragraph at lines 412--415
 [][]
  []
 
-<Figures/pmz3.png, id=231, 2823.54875pt x 2763.32375pt>
+<Figures/pmz3.png, id=235, 2823.54875pt x 2763.32375pt>
 File: Figures/pmz3.png Graphic file (type png)
  <use Figures/pmz3.png>
-Package pdftex.def Info: Figures/pmz3.png used on input line 414.
+Package pdftex.def Info: Figures/pmz3.png used on input line 417.
 (pdftex.def)             Requested size: 133.04286pt x 133.07233pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
 [][]
  []
 
-<Figures/pRF.png, id=232, 2849.64626pt x 2751.27875pt>
+<Figures/pRF.png, id=236, 2849.64626pt x 2751.27875pt>
 File: Figures/pRF.png Graphic file (type png)
  <use Figures/pRF.png>
-Package pdftex.def Info: Figures/pRF.png used on input line 428.
+Package pdftex.def Info: Figures/pRF.png used on input line 431.
 (pdftex.def)             Requested size: 133.05505pt x 133.03804pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
+Underfull \hbox (badness 10000) in paragraph at lines 431--433
 [][]
  []
 
-<Figures/histrf.pdf, id=233, 400.30492pt x 266.68005pt>
+<Figures/histrf.pdf, id=237, 400.30492pt x 266.68005pt>
 File: Figures/histrf.pdf Graphic file (type pdf)
 
 <use Figures/histrf.pdf>
-Package pdftex.def Info: Figures/histrf.pdf used on input line 433.
+Package pdftex.def Info: Figures/histrf.pdf used on input line 436.
 (pdftex.def)             Requested size: 133.07222pt x 133.0752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--435
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 [][]
  []
 
@@ -1446,113 +1442,113 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--435
 
 ] [22 <./Figures/pmu3.png> <./Figures/pmg3.png> <./Figures/pmr3.png> <./Figures
 /pmi3.png> <./Figures/pmz3.png>]
-<Figures/magnet.pdf, id=246, 391.04294pt x 159.6635pt>
+<Figures/magnet.pdf, id=250, 391.04294pt x 159.6635pt>
 File: Figures/magnet.pdf Graphic file (type pdf)
 
 <use Figures/magnet.pdf>
-Package pdftex.def Info: Figures/magnet.pdf used on input line 449.
+Package pdftex.def Info: Figures/magnet.pdf used on input line 452.
 (pdftex.def)             Requested size: 354.86412pt x 144.89445pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 456.
+               Default added (so using `tbp') on input line 459.
 
-<Figures/plotCNN1M.png, id=247, 3693.8pt x 3815.25375pt>
+<Figures/plotCNN1M.png, id=251, 3693.8pt x 3815.25375pt>
 File: Figures/plotCNN1M.png Graphic file (type png)
 
 <use Figures/plotCNN1M.png>
-Package pdftex.def Info: Figures/plotCNN1M.png used on input line 459.
+Package pdftex.def Info: Figures/plotCNN1M.png used on input line 462.
 (pdftex.def)             Requested size: 133.07251pt x 133.02357pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--461
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
 [][]
  []
 
-<Figures/histCNN1M.pdf, id=248, 467.29268pt x 455.93588pt>
+<Figures/histCNN1M.pdf, id=252, 467.29268pt x 455.93588pt>
 File: Figures/histCNN1M.pdf Graphic file (type pdf)
 
 <use Figures/histCNN1M.pdf>
-Package pdftex.def Info: Figures/histCNN1M.pdf used on input line 464.
+Package pdftex.def Info: Figures/histCNN1M.pdf used on input line 467.
 (pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
 [][]
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 472.
+               Default added (so using `tbp') on input line 475.
 
-<Figures/plotCNN2M.png, id=249, 3630.56375pt x 3815.25375pt>
+<Figures/plotCNN2M.png, id=253, 3630.56375pt x 3815.25375pt>
 File: Figures/plotCNN2M.png Graphic file (type png)
 
 <use Figures/plotCNN2M.png>
-Package pdftex.def Info: Figures/plotCNN2M.png used on input line 475.
+Package pdftex.def Info: Figures/plotCNN2M.png used on input line 478.
 (pdftex.def)             Requested size: 133.06567pt x 133.02357pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--477
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
 [][]
  []
 
-<Figures/histCNN2M.pdf, id=250, 459.6234pt x 455.93588pt>
+<Figures/histCNN2M.pdf, id=254, 459.6234pt x 455.93588pt>
 File: Figures/histCNN2M.pdf Graphic file (type pdf)
 
 <use Figures/histCNN2M.pdf>
-Package pdftex.def Info: Figures/histCNN2M.pdf used on input line 480.
+Package pdftex.def Info: Figures/histCNN2M.pdf used on input line 483.
 (pdftex.def)             Requested size: 133.07697pt x 133.07372pt.
  [23 <./Figures/pRF.png> <./Figures/histrf.pdf>]
 [24 <./Figures/magnet.pdf>] [25 <./Figures/plotCNN1M.png> <./Figures/histCNN1M.
-pdf>] <Figures/cnnf2.pdf, id=343, 995.90103pt x 432.80225pt>
+pdf>] <Figures/cnnf2.pdf, id=347, 995.90103pt x 432.80225pt>
 File: Figures/cnnf2.pdf Graphic file (type pdf)
 
 <use Figures/cnnf2.pdf>
-Package pdftex.def Info: Figures/cnnf2.pdf used on input line 492.
+Package pdftex.def Info: Figures/cnnf2.pdf used on input line 495.
 (pdftex.def)             Requested size: 443.57727pt x 221.78946pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/plotCNN2.png, id=344, 3656.66125pt x 3832.3175pt>
+<Figures/plotCNN2.png, id=348, 3656.66125pt x 3832.3175pt>
 File: Figures/plotCNN2.png Graphic file (type png)
 
 <use Figures/plotCNN2.png>
-Package pdftex.def Info: Figures/plotCNN2.png used on input line 502.
+Package pdftex.def Info: Figures/plotCNN2.png used on input line 505.
 (pdftex.def)             Requested size: 133.07365pt x 133.03377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
 [][]
  []
 
-<Figures/histCNN2.pdf, id=345, 459.6234pt x 455.93588pt>
+<Figures/histCNN2.pdf, id=349, 459.6234pt x 455.93588pt>
 File: Figures/histCNN2.pdf Graphic file (type pdf)
 
 <use Figures/histCNN2.pdf>
-Package pdftex.def Info: Figures/histCNN2.pdf used on input line 507.
+Package pdftex.def Info: Figures/histCNN2.pdf used on input line 510.
 (pdftex.def)             Requested size: 133.07697pt x 133.07372pt.
  [26 <./Figures/plotCNN2M.png> <./Figures/histCNN2M.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27 <./Figures/cnnf2.pdf>]
-<Figures/plotCNN1.png, id=859, 3720.90125pt x 3832.3175pt>
+<Figures/plotCNN1.png, id=863, 3720.90125pt x 3832.3175pt>
 File: Figures/plotCNN1.png Graphic file (type png)
 
 <use Figures/plotCNN1.png>
-Package pdftex.def Info: Figures/plotCNN1.png used on input line 520.
+Package pdftex.def Info: Figures/plotCNN1.png used on input line 523.
 (pdftex.def)             Requested size: 133.02689pt x 133.03377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+Underfull \hbox (badness 10000) in paragraph at lines 523--525
 [][]
  []
 
-<Figures/histCNN1.pdf, id=860, 467.29268pt x 455.93588pt>
+<Figures/histCNN1.pdf, id=864, 467.29268pt x 455.93588pt>
 File: Figures/histCNN1.pdf Graphic file (type pdf)
 
 <use Figures/histCNN1.pdf>
-Package pdftex.def Info: Figures/histCNN1.pdf used on input line 525.
+Package pdftex.def Info: Figures/histCNN1.pdf used on input line 528.
 (pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--527
+Underfull \hbox (badness 10000) in paragraph at lines 528--530
 [][]
  []
 
@@ -1561,38 +1557,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 525--527
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Figures/histCNN1.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] <Figures/plotIMS.pdf, id=943, 742.33586pt x 386.26872pt>
+>] <Figures/plotIMS.pdf, id=947, 742.33586pt x 386.26872pt>
 File: Figures/plotIMS.pdf Graphic file (type pdf)
 
 <use Figures/plotIMS.pdf>
-Package pdftex.def Info: Figures/plotIMS.pdf used on input line 538.
+Package pdftex.def Info: Figures/plotIMS.pdf used on input line 541.
 (pdftex.def)             Requested size: 354.8673pt x 177.42642pt.
 
-<Figures/plotDNN1.png, id=944, 3693.8pt x 3815.25375pt>
+<Figures/plotDNN1.png, id=948, 3693.8pt x 3815.25375pt>
 File: Figures/plotDNN1.png Graphic file (type png)
 
 <use Figures/plotDNN1.png>
-Package pdftex.def Info: Figures/plotDNN1.png used on input line 547.
+Package pdftex.def Info: Figures/plotDNN1.png used on input line 550.
 (pdftex.def)             Requested size: 133.07251pt x 133.02357pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 [][]
  []
 
-<Figures/histDNN1.pdf, id=945, 467.29268pt x 455.93588pt>
+<Figures/histDNN1.pdf, id=949, 467.29268pt x 455.93588pt>
 File: Figures/histDNN1.pdf Graphic file (type pdf)
 
 <use Figures/histDNN1.pdf>
-Package pdftex.def Info: Figures/histDNN1.pdf used on input line 552.
+Package pdftex.def Info: Figures/histDNN1.pdf used on input line 555.
 (pdftex.def)             Requested size: 133.07283pt x 133.07372pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--554
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
 [][]
  []
 
 [29 <./Figures/plotIMS.pdf>] [30 <./Figures/plotDNN1.png> <./Figures/histDNN1.p
 df>]
-Overfull \hbox (4.76006pt too wide) in paragraph at lines 566--577
+Overfull \hbox (4.76006pt too wide) in paragraph at lines 569--580
  [][] 
  []
 
@@ -1600,16 +1596,16 @@ Overfull \hbox (4.76006pt too wide) in paragraph at lines 566--577
 5. fejezet.
 [32
 
-] <Figures/MG.png, id=1025, 794.97pt x 614.295pt>
+] <Figures/MG.png, id=1029, 794.97pt x 614.295pt>
 File: Figures/MG.png Graphic file (type png)
  <use Figures/MG.png>
-Package pdftex.def Info: Figures/MG.png used on input line 596.
+Package pdftex.def Info: Figures/MG.png used on input line 599.
 (pdftex.def)             Requested size: 354.86412pt x 274.21806pt.
 
 [33
 
  <./Figures/MG.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 605.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 608.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1621,13 +1617,7 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Overfull \hbox (29.7507pt too wide) in paragraph at lines 640--641
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (36.3207pt too wide) in paragraph at lines 646--647
+Overfull \hbox (29.7507pt too wide) in paragraph at lines 643--644
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -1638,21 +1628,27 @@ Overfull \hbox (36.3207pt too wide) in paragraph at lines 649--650
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[35] <Figures/FILTERS.png, id=1039, 2277.50874pt x 454.69875pt>
+
+Overfull \hbox (36.3207pt too wide) in paragraph at lines 652--653
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[35] <Figures/FILTERS.png, id=1043, 2277.50874pt x 454.69875pt>
 File: Figures/FILTERS.png Graphic file (type png)
 
 <use Figures/FILTERS.png>
-Package pdftex.def Info: Figures/FILTERS.png used on input line 687.
+Package pdftex.def Info: Figures/FILTERS.png used on input line 690.
 (pdftex.def)             Requested size: 443.57848pt x 88.55835pt.
 
-<Figures/imgal.jpeg, id=1040, 150.5625pt x 150.5625pt>
+<Figures/imgal.jpeg, id=1044, 150.5625pt x 150.5625pt>
 File: Figures/imgal.jpeg Graphic file (type jpg)
 
 <use Figures/imgal.jpeg>
-Package pdftex.def Info: Figures/imgal.jpeg used on input line 692.
+Package pdftex.def Info: Figures/imgal.jpeg used on input line 695.
 (pdftex.def)             Requested size: 88.71434pt x 88.71852pt.
  [36] [37 <./Figures/FILTERS.png> <./Figures/imgal.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 723--724
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
 []\T1/ptm/m/n/12 ^^PPhotometric Reds-hifts.^^Q NA-SA/I-PAC Ext-ra-ga-lac-tic Da
 -ta-ba-se - NED,
  []
@@ -1660,67 +1656,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 723--724
 [38
 
 ]
-Underfull \hbox (badness 4120) in paragraph at lines 744--745
+Underfull \hbox (badness 4120) in paragraph at lines 747--748
 []\T1/ptm/m/n/12 Csabai, I., et al. ^^PMul-ti-di-men-si-o-nal In-dex-ing To-ols
  for the Vir-tu-al Ob-ser-
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 744--745
+Underfull \hbox (badness 2689) in paragraph at lines 747--748
 \T1/ptm/m/n/12 va-to-ry.^^Q Ast-ro-no-mis-che Nach-rich-ten, vol. 328, no. 8, 2
 007, pp. 852^^U857.,
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 749--750
+Underfull \hbox (badness 1546) in paragraph at lines 752--753
 []\T1/ptm/m/n/12 ^^PRandom Fo-rests Leo Bre-iman and Ade-le Cut-ler.^^Q Sta-tis
 -tics at UC Berke-ley,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 []$\T1/pcr/m/n/12 http : \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 www . globalsoftware
 support . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 wp \OMS/cmsy/m/n/12 ^^@
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 755--756
+Underfull \hbox (badness 2142) in paragraph at lines 758--759
 []\T1/ptm/m/n/12 L., Sa-mu-el, et al. ^^PDon't De-cay the Lear-ning Ra-te, Inc-
 re-a-se the Batch Si-
  []
 
 [39]
-Underfull \hbox (badness 1997) in paragraph at lines 759--760
+Underfull \hbox (badness 1997) in paragraph at lines 762--763
 []\T1/ptm/m/n/12 D'Isanto, A., et al. ^^PRe-turn of the Fea-tu-res. Ef-fi-ci-en
 t Fea-tu-re Se-lec-ti-on and
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 759--760
+Underfull \hbox (badness 1688) in paragraph at lines 762--763
 \T1/ptm/m/n/12 In-terp-re-ta-ti-on for Pho-to-met-ric Reds-hifts.^^Q Ast-ro-nom
 y & Ast-rophy-sics, 2018,
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 761--762
+Underfull \hbox (badness 1571) in paragraph at lines 764--765
 []\T1/ptm/m/n/12 Hoyle, B. ^^PMe-a-suring Pho-to-met-ric Reds-hifts Us-ing Ga-l
 axy Ima-ges and Deep
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 761--762
+Underfull \hbox (badness 2426) in paragraph at lines 764--765
 \T1/ptm/m/n/12 Ne-u-ral Net-works.^^Q Ast-ro-nomy and Com-pu-t-ing, vol. 16, 20
 16, pp. 34^^U40.,
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 763--764
+Underfull \hbox (badness 1215) in paragraph at lines 766--767
 []\T1/ptm/m/n/12 D'Isanto, A., and K. L. Pols-ter-er. ^^PPho-to-met-ric Reds-hi
 ft Est-ima-ti-on via Deep
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 763--764
+Underfull \hbox (badness 3977) in paragraph at lines 766--767
 \T1/ptm/m/n/12 Lear-ning.^^Q Ast-ro-nomy & Ast-rophy-sics, vol. 609, 2018, doi:
 10.1051/0004-
  []
@@ -1733,10 +1729,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18034 strings out of 492995
- 334921 string characters out of 6132704
+ 18035 strings out of 492995
+ 334929 string characters out of 6132704
  386286 words of memory out of 5000000
- 21327 multiletter control sequences out of 15000+600000
+ 21328 multiletter control sequences out of 15000+600000
  70251 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,16n,43p,10372b,1252s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1745,23 +1741,25 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
-mes/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on szd1.pdf (45 pages, 8639889 bytes).
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/
+utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on szd1.pdf (45 pages, 8658296 bytes).
 PDF statistics:
- 1115 PDF objects out of 1200 (max. 8388607)
- 479 compressed objects within 5 object streams
+ 1127 PDF objects out of 1200 (max. 8388607)
+ 489 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
